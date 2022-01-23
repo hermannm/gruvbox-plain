@@ -1,0 +1,21 @@
+{
+    "name": "gb-mat-alt",
+    "displayName": "gb-mat-alt",
+    "description": "Theme based on sainnhe/gruvbox-material, but with a slightly altered color scheme.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "gb-mat-alt",
+                "uiTheme": "vs-dark",
+                "path": "./themes/gb-mat-alt-theme.json"
+            }
+        ]
+    }
+}
