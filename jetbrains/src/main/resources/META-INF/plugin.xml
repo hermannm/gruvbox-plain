@@ -1,0 +1,15 @@
+<idea-plugin>
+    <id>com.hermannm.gb-mat-alt</id>
+    <name>gb-mat-alt</name>
+    <vendor email="hermann.morkrid@gmail.com" url="https://github.com/hermannm">hermannm</vendor>
+
+    <description>Theme based on sainnhe/gruvbox-material, but with a slightly altered color scheme.</description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+    </actions>
+</idea-plugin>
