@@ -2,8 +2,15 @@
     "name": "gb-mat-alt",
     "displayName": "gb-mat-alt",
     "publisher": "hermannm",
-    "author": {"name": "hermannm"},
+    "author": {
+        "name": "hermannm",
+        "url": "https://github.com/hermannm"
+    },
     "description": "Theme based on sainnhe/gruvbox-material, but with a slightly altered color scheme.",
+    "repository": {
+        "url": "https://github.com/hermannm/gb-mat-alt",
+        "type": "git"
+    },
     "version": "0.1.0",
     "license": "MIT",
     "engines": {
