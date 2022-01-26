@@ -24,5 +24,3 @@ For edge cases in languages where these may not apply, the color deemed most app
   _Copyright (c) 2017 Pavel Pertsev, [MIT/X11 license](https://github.com/morhetz/gruvbox#license)_
 - [jdinhify/vscode-theme-gruvbox](https://github.com/jdinhify/vscode-theme-gruvbox) for the base VSCode UI theme<br>
   _Copyright (c) 2017 JD, [MIT license](https://github.com/jdinhify/vscode-theme-gruvbox/blob/main/LICENSE)_
-- [Vincent-P/gruvbox-intellij-theme](https://github.com/Vincent-P/gruvbox-intellij-theme) for the base JetBrains UI theme<br>
-  _Copyright (c) 2019 Vincent Parizet, [MIT license](https://github.com/Vincent-P/gruvbox-intellij-theme/blob/master/LICENSE)_

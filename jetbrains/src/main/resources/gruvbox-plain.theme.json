@@ -1,8 +1,10 @@
 {
-  "name": "gruvbox-simple",
+  "name": "gruvbox-plain",
   "author": "hermannm",
   "dark": true,
-  "editorScheme": "./gruvbox-simple_scheme.xml",
   "ui": {
+    "*": {
+      "background": "#ff0000"
+    }
   }
 }
