@@ -3,8 +3,5 @@
   "author": "hermannm",
   "dark": true,
   "ui": {
-    "*": {
-      "background": "#ff0000"
-    }
   }
 }
