@@ -2,4 +2,4 @@
 
 ## [Unreleased]
 
-[unreleased]: https://github.com/hermannm/gb-mat-alt
+[unreleased]: https://github.com/hermannm/gruvbox-plain

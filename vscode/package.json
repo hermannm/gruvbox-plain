@@ -1,6 +1,6 @@
 {
-    "name": "gb-mat-alt",
-    "displayName": "gb-mat-alt",
+    "name": "gruvbox-plain",
+    "displayName": "gruvbox-plain",
     "publisher": "hermannm",
     "author": {
         "name": "hermannm",
@@ -8,7 +8,7 @@
     },
     "description": "Theme based on sainnhe/gruvbox-material, but with a slightly altered color scheme.",
     "repository": {
-        "url": "https://github.com/hermannm/gb-mat-alt",
+        "url": "https://github.com/hermannm/gruvbox-plain",
         "type": "git"
     },
     "version": "0.1.0",
@@ -22,9 +22,9 @@
     "contributes": {
         "themes": [
             {
-                "label": "gb-mat-alt",
+                "label": "gruvbox-plain",
                 "uiTheme": "vs-dark",
-                "path": "./themes/gb-mat-alt.json"
+                "path": "./theme.json"
             }
         ]
     }

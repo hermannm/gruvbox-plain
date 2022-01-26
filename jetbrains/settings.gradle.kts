@@ -1,2 +1,2 @@
-rootProject.name = "gb-mat-alt"
+rootProject.name = "gruvbox-plain"
 

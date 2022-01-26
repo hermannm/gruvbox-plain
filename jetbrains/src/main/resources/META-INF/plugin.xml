@@ -1,15 +1,15 @@
 <idea-plugin>
-    <id>com.hermannm.gb-mat-alt</id>
-    <name>gb-mat-alt</name>
+    <id>com.hermannm.gruvbox-plain</id>
+    <name>gruvbox-plain</name>
     <vendor email="hermann.morkrid@gmail.com" url="https://github.com/hermannm">hermannm</vendor>
 
-    <description>Theme based on sainnhe/gruvbox-material, but with a slightly altered color scheme.</description>
+    <description><![CDATA[
+    Theme based on <a href="https://github.com/morhetz/gruvbox">morhetz/gruvbox</a>, but with a plainer color palette for syntax highlighting.
+    ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="com.hermannm.gruvbox-plain" path="/gruvbox-plain.theme.json"/>
     </extensions>
-
-    <actions>
-    </actions>
 </idea-plugin>
