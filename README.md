@@ -6,7 +6,7 @@ Theme for VSCode and JetBrains IDEs, based on [morhetz/gruvbox](https://github.c
 
 gruvbox-plain uses a limited subset of the gruvbox dark mode color palette for syntax highlighting. The below table shows the general usage of the different colors.
 
-| Color     |                                                          | Usage                             |
+| Hex       |                          Color                           | Usage                             |
 | --------- | :------------------------------------------------------: | --------------------------------- |
 | `#ebdbb2` | ![](https://via.placeholder.com/15/ebdbb2/000000?text=+) | Variables, properties, plain text |
 | `#fe8019` | ![](https://via.placeholder.com/15/fe8019/000000?text=+) | Keywords, operators               |
