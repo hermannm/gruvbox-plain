@@ -1,5 +1,3 @@
-vscode/vsc-extension-quickstart.md
-
 jetbrains/**/.gradle
 jetbrains/**/.idea
 jetbrains/**/build
