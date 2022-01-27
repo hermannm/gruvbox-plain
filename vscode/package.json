@@ -6,7 +6,8 @@
         "name": "hermannm",
         "url": "https://github.com/hermannm"
     },
-    "description": "Theme based on sainnhe/gruvbox-material, but with a slightly altered color scheme.",
+    "description": "Theme based on morhetz/gruvbox, but with a plainer color palette for syntax highlighting.",
+    "icon": "img/gruvbox-plain_logo.png",
     "repository": {
         "url": "https://github.com/hermannm/gruvbox-plain",
         "type": "git"
