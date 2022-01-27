@@ -95,6 +95,7 @@
         "punctuation.definition.inheritance",
         "punctuation.definition.typeparameters",
         "punctuation.definition.dictionary",
+        "punctuation.definition.dict",
         "punctuation.definition.array",
         "punctuation.section.embedded",
         "punctuation.section.function",
