@@ -1,4 +1,7 @@
-# gruvbox-plain
+<p align="center">
+  <img alt="logo" src="https://github.com/hermannm/gruvbox-plain/blob/main/vscode/img/gruvbox-plain_logo.png">
+</p>
+<h1 align="center">gruvbox-plain</h1>
 
 Theme for VSCode and JetBrains IDEs, based on [morhetz/gruvbox](https://github.com/morhetz/gruvbox) but with a plainer color palette for syntax highlighting.
 
