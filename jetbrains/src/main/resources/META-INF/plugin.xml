@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.hermannm.gruvbox-plain</id>
+    <id>dev.hermannm.gruvbox-plain</id>
     <name>gruvbox-plain</name>
     <vendor email="hermann.morkrid@gmail.com" url="https://github.com/hermannm">hermannm</vendor>
 
@@ -80,6 +80,6 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <themeProvider id="com.hermannm.gruvbox-plain" path="/gruvbox-plain.theme.json"/>
+        <themeProvider id="dev.hermannm.gruvbox-plain" path="/gruvbox-plain.theme.json"/>
     </extensions>
 </idea-plugin>
