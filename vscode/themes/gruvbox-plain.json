@@ -128,6 +128,9 @@
       ]
     }
 	],
+  "semanticTokenColors": {
+    "operatorOverloaded": "#fe8019"
+  },
 	"colors": {
     "focusBorder": "#3c3836",
     "foreground": "#ebdbb2",
