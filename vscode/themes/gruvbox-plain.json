@@ -22,6 +22,7 @@
 
         "keyword.operator",
         "punctuation.definition.decorator",
+        "punctuation.definition.annotation",
 
         "punctuation.definition.heading.markdown",
         "punctuation.definition.list.begin.markdown",
@@ -34,11 +35,13 @@
 			"scope": [
 				"entity.name.type",
 				"entity.name.namespace",
+        "entity.name.tag",
+				"entity.other.attribute-name.class.css",
+				"entity.other.attribute-name.id.css",
 				"support.type",
 				"support.class",
-				"entity.name.tag",
-				"entity.other.attribute-name.class.css",
-				"entity.other.attribute-name.id.css"
+        "storage.type.primitive",
+        "storage.type.annotation"
 			]
 		},
     {
@@ -79,6 +82,10 @@
         "punctuation.separator",
         "punctuation.terminator",
         "punctuation.parenthesis",
+        "punctuation.curlybrace",
+        "punctuation.squarebracket",
+        "punctuation.bracket",
+        "punctuation.section",
         "punctuation.other.period",
         "punctuation.other.comma",
         "punctuation.other.colon",
