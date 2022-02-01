@@ -63,7 +63,6 @@
 				"constant.language",
 				"support.constant",
         "variable.parameter.function.language",
-        "meta.jsx.children",
         
 				"keyword.other.unit",
 				"constant.other.color",
