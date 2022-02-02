@@ -23,6 +23,8 @@
         "keyword.operator",
         "punctuation.definition.decorator",
         "punctuation.definition.annotation",
+        "punctuation.definition.entity.css",
+        "punctuation.separator.key-value.html",
 
         "punctuation.definition.heading.markdown",
         "punctuation.definition.list.begin.markdown",
@@ -38,6 +40,7 @@
         "entity.name.tag",
 				"entity.other.attribute-name.class.css",
 				"entity.other.attribute-name.id.css",
+        "entity.other.attribute-name.pseudo-element.css",
 				"support.type",
 				"support.class",
         "storage.type.primitive",
