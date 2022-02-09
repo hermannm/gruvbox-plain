@@ -119,8 +119,7 @@
 			"scope": [
 				"comment",
 				"string.quoted.docstring",
-				"punctuation.definition.tag",
-        "comment.block.documentation"
+				"punctuation.definition.tag"
 			]
 		},
     {
