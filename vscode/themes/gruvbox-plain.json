@@ -44,7 +44,9 @@
 				"support.type",
 				"support.class",
         "storage.type.primitive",
-        "storage.type.annotation"
+        "storage.type.annotation",
+        "keyword.type",
+        "storage.type.cs"
 			]
 		},
     {
@@ -119,7 +121,8 @@
 			"scope": [
 				"comment",
 				"string.quoted.docstring",
-				"punctuation.definition.tag"
+				"punctuation.definition.tag",
+        "comment entity.name.tag"
 			]
 		},
     {
