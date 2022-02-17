@@ -92,6 +92,7 @@
         "punctuation.squarebracket",
         "punctuation.bracket",
         "punctuation.section",
+        "punctuation.destructuring",
         "punctuation.other.period",
         "punctuation.other.comma",
         "punctuation.other.colon",
