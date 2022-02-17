@@ -9,7 +9,9 @@
 			"scope": [
 				"variable",
 				"entity.other.attribute-name",
-				"support.type.property-name"
+				"support.type.property-name",
+
+        "entity.name.tag.yaml"
 			]
 		},
 		{
