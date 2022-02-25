@@ -111,6 +111,7 @@
         "punctuation.definition.dictionary",
         "punctuation.definition.dict",
         "punctuation.definition.array",
+        "punctuation.definition.imports",
         "punctuation.section.embedded",
         "punctuation.section.function",
         "keyword.operator.type.annotation",
