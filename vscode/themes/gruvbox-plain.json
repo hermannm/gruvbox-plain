@@ -70,6 +70,7 @@
 				"constant.language",
 				"support.constant",
         "variable.parameter.function.language",
+        "variable.language",
         
 				"keyword.other.unit",
 				"constant.other.color",
