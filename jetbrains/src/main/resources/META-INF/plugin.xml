@@ -5,8 +5,8 @@
 
     <description><![CDATA[
         <p>Theme based on <a href="https://github.com/morhetz/gruvbox">morhetz/gruvbox</a>, but with a plainer color palette for syntax highlighting.</p>
-        <h3>Syntax Colors</h3>
-        <p>gruvbox-plain uses a limited subset of the gruvbox dark mode color palette for syntax highlighting. The below table shows the general usage of the different colors.</p>
+        <h3>Color Scheme</h3>
+        <p>gruvbox-plain uses a limited subset of the gruvbox dark mode color palette for syntax highlighting. The table below shows the general usage of the different colors.</p>
         <table>
             <tr>
                 <th>Hex</th>
@@ -32,7 +32,7 @@
                 <td style="text-align:center">
                     <img src="https://via.placeholder.com/15/fabd2f/000000?text=+" />
                 </td>
-                <td>Types, classes, components, tags</td>
+                <td>Types, classes, namespaces, components, tags</td>
             </tr>
             <tr>
                 <td><code>#b8bb26</code></td>
@@ -61,6 +61,13 @@
                     <img src="https://via.placeholder.com/15/928374/000000?text=+" />
                 </td>
                 <td>Comments, documentation</td>
+            </tr>
+            <tr>
+                <td><code>#282828</code></td>
+                <td style="text-align:center">
+                    <img src="https://via.placeholder.com/15/282828/000000?text=+" />
+                </td>
+                <td>Background color</td>
             </tr>
         </table>
         <p>For edge cases in languages where these may not apply, the color deemed most appropriate has been chosen. This can always be overridden in <em>Preferences -> Editor -> Color Scheme</em> in your IDE.</p>

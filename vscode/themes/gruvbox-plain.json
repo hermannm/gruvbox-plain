@@ -34,7 +34,7 @@
 			]
 		},
     {
-			"name": "types, classes, components, tags",
+			"name": "types, classes, namespaces, components, tags",
 			"settings": {"foreground": "#fabd2f"},
 			"scope": [
 				"entity.name.type",
@@ -47,8 +47,8 @@
 				"support.class",
         "storage.type.primitive",
         "storage.type.annotation",
-        "keyword.type",
-        "storage.type.cs"
+        "storage.type.cs",
+        "keyword.type"
 			]
 		},
     {
