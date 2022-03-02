@@ -113,10 +113,15 @@
         "punctuation.definition.dict",
         "punctuation.definition.array",
         "punctuation.definition.imports",
+        "punctuation.definition.group",
+        "punctuation.definition.logical-expression",
+        "punctuation.definition.variable.shell",
+        "punctuation.definition.variable.makefile",
         "punctuation.section.embedded",
         "punctuation.section.function",
         "keyword.operator.type.annotation",
         "constant.character.format.placeholder.other",
+        "constant.character.escape.continuation",
         "meta.brace"
 			]
 		},
