@@ -1,32 +1,32 @@
 {
-    "name": "gruvbox-plain",
-    "displayName": "gruvbox-plain",
-    "publisher": "hermannm",
-    "author": {
-        "name": "hermannm",
-        "url": "https://github.com/hermannm"
-    },
-    "description": "Theme based on morhetz/gruvbox, but with a plainer color palette for syntax highlighting.",
-    "icon": "img/gruvbox-plain_logo.png",
-    "repository": {
-        "url": "https://github.com/hermannm/gruvbox-plain",
-        "type": "git"
-    },
-    "version": "0.1.0",
-    "license": "MIT",
-    "engines": {
-        "vscode": "^1.63.0"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "gruvbox-plain",
-                "uiTheme": "vs-dark",
-                "path": "./themes/gruvbox-plain.json"
-            }
-        ]
-    }
+  "name": "gruvbox-plain",
+  "displayName": "gruvbox-plain",
+  "publisher": "hermannm",
+  "author": {
+    "name": "hermannm",
+    "url": "https://github.com/hermannm"
+  },
+  "description": "Theme based on morhetz/gruvbox, but with a plainer color palette for syntax highlighting.",
+  "icon": "img/gruvbox-plain_logo.png",
+  "repository": {
+    "url": "https://github.com/hermannm/gruvbox-plain",
+    "type": "git"
+  },
+  "version": "0.1.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "gruvbox-plain",
+        "uiTheme": "vs-dark",
+        "path": "./themes/gruvbox-plain.json"
+      }
+    ]
+  }
 }

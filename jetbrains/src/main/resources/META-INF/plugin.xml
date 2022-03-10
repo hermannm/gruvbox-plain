@@ -1,92 +1,92 @@
 <idea-plugin>
-    <id>dev.hermannm.gruvbox-plain</id>
-    <name>gruvbox-plain</name>
-    <vendor email="hermann.morkrid@gmail.com" url="https://github.com/hermannm">hermannm</vendor>
+  <id>dev.hermannm.gruvbox-plain</id>
+  <name>gruvbox-plain</name>
+  <vendor email="hermann.morkrid@gmail.com" url="https://github.com/hermannm">hermannm</vendor>
 
-    <description><![CDATA[
-        <p>Theme based on <a href="https://github.com/morhetz/gruvbox">morhetz/gruvbox</a>, but with a plainer color palette for syntax highlighting.</p>
-        <h3>Color Scheme</h3>
-        <p>gruvbox-plain uses a limited subset of the gruvbox dark mode color palette for syntax highlighting. The table below shows the general usage of the different colors.</p>
-        <table>
-            <tr>
-                <th>Hex</th>
-                <th>Color</th>
-                <th>Usage</th>
-            </tr>
-            <tr>
-                <td><code>#ebdbb2</code></td>
-                <td style="text-align:center">
-                    <img src="https://via.placeholder.com/15/ebdbb2/000000?text=+" />
-                </td>
-                <td>Variables, properties, plain text</td>
-            </tr>
-            <tr>
-                <td><code>#fe8019</code></td>
-                <td style="text-align:center">
-                    <img src="https://via.placeholder.com/15/fe8019/000000?text=+" />
-                </td>
-                <td>Keywords, operators</td>
-            </tr>
-            <tr>
-                <td><code>#fabd2f</code></td>
-                <td style="text-align:center">
-                    <img src="https://via.placeholder.com/15/fabd2f/000000?text=+" />
-                </td>
-                <td>Types, classes, namespaces, components, tags</td>
-            </tr>
-            <tr>
-                <td><code>#b8bb26</code></td>
-                <td style="text-align:center">
-                    <img src="https://via.placeholder.com/15/b8bb26/000000?text=+" />
-                </td>
-                <td>Functions, methods</td>
-            </tr>
-            <tr>
-                <td><code>#8ec07c</code></td>
-                <td style="text-align:center">
-                    <img src="https://via.placeholder.com/15/8ec07c/000000?text=+" />
-                </td>
-                <td>Values, language constants</td>
-            </tr>
-            <tr>
-                <td><code>#a89984</code></td>
-                <td style="text-align:center">
-                    <img src="https://via.placeholder.com/15/a89984/000000?text=+" />
-                </td>
-                <td>Punctuation</td>
-            </tr>
-            <tr>
-                <td><code>#928374</code></td>
-                <td style="text-align:center">
-                    <img src="https://via.placeholder.com/15/928374/000000?text=+" />
-                </td>
-                <td>Comments, documentation</td>
-            </tr>
-            <tr>
-                <td><code>#282828</code></td>
-                <td style="text-align:center">
-                    <img src="https://via.placeholder.com/15/282828/000000?text=+" />
-                </td>
-                <td>Background color</td>
-            </tr>
-        </table>
-        <p>For edge cases in languages where these may not apply, the color deemed most appropriate has been chosen. This can always be overridden in <em>Preferences -> Editor -> Color Scheme</em> in your IDE.</p>
-        <h3>Credits</h3>
-        <ul>
-            <li>
-                <a href="https://github.com/morhetz/gruvbox">morhetz/gruvbox</a> for the original color scheme<br>
-                <em>Copyright (c) 2017 Pavel Pertsev, <a href="https://github.com/morhetz/gruvbox#license">MIT/X11 license</a></em>
-            </li>
-            <li>
-                <a href="https://github.com/Vincent-P/gruvbox-intellij-theme">Vincent-P/gruvbox-intellij-theme</a> for the base JetBrains UI theme<br>
-                <em>Copyright (c) 2019 Vincent Parizet, <a href="https://github.com/Vincent-P/gruvbox-intellij-theme/blob/master/LICENSE">MIT license</a></em>
-            </li>
-        </ul>
-    ]]></description>
+  <description><![CDATA[
+    <p>Theme based on <a href="https://github.com/morhetz/gruvbox">morhetz/gruvbox</a>, but with a plainer color palette for syntax highlighting.</p>
+    <h3>Color Scheme</h3>
+    <p>gruvbox-plain uses a limited subset of the gruvbox dark mode color palette for syntax highlighting. The table below shows the general usage of the different colors.</p>
+    <table>
+      <tr>
+        <th>Hex</th>
+        <th>Color</th>
+        <th>Usage</th>
+      </tr>
+      <tr>
+        <td><code>#ebdbb2</code></td>
+        <td style="text-align:center">
+          <img src="https://via.placeholder.com/15/ebdbb2/000000?text=+" />
+        </td>
+        <td>Variables, properties, plain text</td>
+      </tr>
+      <tr>
+        <td><code>#fe8019</code></td>
+        <td style="text-align:center">
+          <img src="https://via.placeholder.com/15/fe8019/000000?text=+" />
+        </td>
+        <td>Keywords, operators</td>
+      </tr>
+      <tr>
+        <td><code>#fabd2f</code></td>
+        <td style="text-align:center">
+          <img src="https://via.placeholder.com/15/fabd2f/000000?text=+" />
+        </td>
+        <td>Types, classes, namespaces, components, tags</td>
+      </tr>
+      <tr>
+        <td><code>#b8bb26</code></td>
+        <td style="text-align:center">
+          <img src="https://via.placeholder.com/15/b8bb26/000000?text=+" />
+        </td>
+        <td>Functions, methods</td>
+      </tr>
+      <tr>
+        <td><code>#8ec07c</code></td>
+        <td style="text-align:center">
+          <img src="https://via.placeholder.com/15/8ec07c/000000?text=+" />
+        </td>
+        <td>Values, language constants</td>
+      </tr>
+      <tr>
+        <td><code>#a89984</code></td>
+        <td style="text-align:center">
+          <img src="https://via.placeholder.com/15/a89984/000000?text=+" />
+        </td>
+        <td>Punctuation</td>
+      </tr>
+      <tr>
+        <td><code>#928374</code></td>
+        <td style="text-align:center">
+          <img src="https://via.placeholder.com/15/928374/000000?text=+" />
+        </td>
+        <td>Comments, documentation</td>
+      </tr>
+      <tr>
+        <td><code>#282828</code></td>
+        <td style="text-align:center">
+          <img src="https://via.placeholder.com/15/282828/000000?text=+" />
+        </td>
+        <td>Background color</td>
+      </tr>
+    </table>
+    <p>For edge cases in languages where these may not apply, the color deemed most appropriate has been chosen. This can always be overridden in <em>Preferences -> Editor -> Color Scheme</em> in your IDE.</p>
+    <h3>Credits</h3>
+    <ul>
+      <li>
+        <a href="https://github.com/morhetz/gruvbox">morhetz/gruvbox</a> for the original color scheme<br>
+        <em>Copyright (c) 2017 Pavel Pertsev, <a href="https://github.com/morhetz/gruvbox#license">MIT/X11 license</a></em>
+      </li>
+      <li>
+        <a href="https://github.com/Vincent-P/gruvbox-intellij-theme">Vincent-P/gruvbox-intellij-theme</a> for the base JetBrains UI theme<br>
+        <em>Copyright (c) 2019 Vincent Parizet, <a href="https://github.com/Vincent-P/gruvbox-intellij-theme/blob/master/LICENSE">MIT license</a></em>
+      </li>
+    </ul>
+  ]]></description>
 
-    <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <themeProvider id="dev.hermannm.gruvbox-plain" path="/gruvbox-plain.theme.json"/>
-    </extensions>
+  <extensions defaultExtensionNs="com.intellij">
+    <themeProvider id="dev.hermannm.gruvbox-plain" path="/gruvbox-plain.theme.json"/>
+  </extensions>
 </idea-plugin>
