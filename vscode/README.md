@@ -21,7 +21,7 @@ For edge cases in languages where these may not apply, the color deemed most app
 
 ## Credits
 
-- [morhetz/gruvbox](https://github.com/morhetz/gruvbox) for the original color scheme<br>
-  _Copyright (c) 2017 Pavel Pertsev, [MIT/X11 license](https://github.com/morhetz/gruvbox#license)_
-- [jdinhify/vscode-theme-gruvbox](https://github.com/jdinhify/vscode-theme-gruvbox) for the base VSCode UI theme<br>
-  _Copyright (c) 2017 JD, [MIT license](https://github.com/jdinhify/vscode-theme-gruvbox/blob/main/LICENSE)_
+- [morhetz/gruvbox](https://github.com/morhetz/gruvbox) for the original color scheme
+  - _Copyright (c) 2017 Pavel Pertsev, [MIT/X11 license](https://github.com/morhetz/gruvbox#license)_
+- [jdinhify/vscode-theme-gruvbox](https://github.com/jdinhify/vscode-theme-gruvbox) for the base VSCode UI theme
+  - _Copyright (c) 2017 JD, [MIT license](https://github.com/jdinhify/vscode-theme-gruvbox/blob/main/LICENSE)_

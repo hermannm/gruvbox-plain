@@ -75,11 +75,19 @@
     <ul>
       <li>
         <a href="https://github.com/morhetz/gruvbox">morhetz/gruvbox</a> for the original color scheme<br>
-        <em>Copyright (c) 2017 Pavel Pertsev, <a href="https://github.com/morhetz/gruvbox#license">MIT/X11 license</a></em>
+        <ul>
+          <li>
+            <em>Copyright (c) 2017 Pavel Pertsev, <a href="https://github.com/morhetz/gruvbox#license">MIT/X11 license</a></em>
+          </li>
+        </ul>
       </li>
       <li>
-        <a href="https://github.com/Vincent-P/gruvbox-intellij-theme">Vincent-P/gruvbox-intellij-theme</a> for the base JetBrains UI theme<br>
-        <em>Copyright (c) 2019 Vincent Parizet, <a href="https://github.com/Vincent-P/gruvbox-intellij-theme/blob/master/LICENSE">MIT license</a></em>
+        <a href="https://github.com/Vincent-P/gruvbox-intellij-theme">Vincent-P/gruvbox-intellij-theme</a> for the base JetBrains UI theme
+        <ul>
+          <li>
+            <em>Copyright (c) 2019 Vincent Parizet, <a href="https://github.com/Vincent-P/gruvbox-intellij-theme/blob/master/LICENSE">MIT license</a></em>
+          </li>
+        </ul>
       </li>
     </ul>
   ]]></description>
