@@ -112,6 +112,7 @@
         "punctuation.definition.logical-expression",
         "punctuation.definition.variable.shell",
         "punctuation.definition.variable.makefile",
+        "punctuation.definition.sequence",
         "punctuation.section.embedded",
         "punctuation.section.function",
         "keyword.operator.type.annotation",
