@@ -64,8 +64,8 @@
         "constant.numeric",
         "constant.language",
         "support.constant",
-        "variable.parameter.function.language",
         "variable.language",
+        "variable.parameter.function.language.special.self",
 
         "keyword.other.unit",
         "constant.other.color",
