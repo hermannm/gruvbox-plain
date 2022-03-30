@@ -152,6 +152,8 @@
     "selection.background": "#689d6a80",
     "errorForeground": "#fb4934",
 
+    "settings.headerForeground": "#ebdbb2",
+
     "button.background": "#45858880",
     "button.foreground": "#ebdbb2",
     "button.hoverBackground": "#45858860",
