@@ -10,6 +10,7 @@
         "variable",
         "entity.other.attribute-name",
         "support.type.property-name",
+        "support.constant.property",
 
         "entity.name.tag.yaml"
       ]
