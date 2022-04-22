@@ -115,6 +115,7 @@
         "punctuation.definition.variable.makefile",
         "punctuation.definition.sequence",
         "punctuation.definition.section",
+        "punctuation.definition.variables",
         "punctuation.section.embedded",
         "punctuation.section.function",
         "keyword.operator.type.annotation",
