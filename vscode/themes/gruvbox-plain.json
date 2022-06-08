@@ -31,7 +31,9 @@
 
         "punctuation.definition.heading.markdown",
         "punctuation.definition.list.begin.markdown",
-        "punctuation.definition.italic.markdown"
+        "punctuation.definition.italic.markdown",
+
+        "keyword.type.graphql"
       ]
     },
     {
@@ -88,6 +90,7 @@
         "punctuation.curlybrace",
         "punctuation.squarebracket",
         "punctuation.bracket",
+        "punctuation.colon",
         "punctuation.section",
         "punctuation.destructuring",
         "punctuation.other.period",
@@ -118,6 +121,7 @@
         "punctuation.definition.variables",
         "punctuation.section.embedded",
         "punctuation.section.function",
+        "punctuation.operation.graphql",
         "keyword.operator.type.annotation",
         "constant.character.format.placeholder.other",
         "constant.character.escape.continuation",
