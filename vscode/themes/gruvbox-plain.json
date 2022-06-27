@@ -95,6 +95,7 @@
         "punctuation.destructuring",
         "punctuation.other.period",
         "punctuation.other.comma",
+        "punctuation.comma",
         "punctuation.other.colon",
         "punctuation.definition.block",
         "punctuation.definition.parameters",
@@ -123,6 +124,7 @@
         "punctuation.section.function",
         "punctuation.operation.graphql",
         "keyword.operator.type.annotation",
+        "keyword.operator.accessor",
         "constant.character.format.placeholder.other",
         "constant.character.escape.continuation",
         "meta.brace"
@@ -131,12 +133,7 @@
     {
       "name": "comments, documentation",
       "settings": { "foreground": "#928374" },
-      "scope": [
-        "comment",
-        "string.quoted.docstring",
-        "punctuation.definition.tag",
-        "comment entity.name.tag"
-      ]
+      "scope": ["comment", "string.quoted.docstring", "punctuation.definition.tag", "comment entity.name.tag"]
     },
     {
       "name": "italic",
