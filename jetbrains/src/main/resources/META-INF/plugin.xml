@@ -2,7 +2,10 @@
   <id>dev.hermannm.gruvbox-plain</id>
   <name>gruvbox-plain</name>
   <vendor email="hermann.morkrid@gmail.com" url="https://github.com/hermannm">hermannm</vendor>
-
+  <depends>com.intellij.modules.platform</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <themeProvider id="dev.hermannm.gruvbox-plain" path="/gruvbox-plain.theme.json"/>
+  </extensions>
   <description><![CDATA[
     <p>Theme based on <a href="https://github.com/morhetz/gruvbox">morhetz/gruvbox</a>, but with a plainer color palette for syntax highlighting.</p>
     <h3>Color Scheme</h3>
@@ -91,10 +94,4 @@
       </li>
     </ul>
   ]]></description>
-
-  <depends>com.intellij.modules.platform</depends>
-
-  <extensions defaultExtensionNs="com.intellij">
-    <themeProvider id="dev.hermannm.gruvbox-plain" path="/gruvbox-plain.theme.json"/>
-  </extensions>
 </idea-plugin>
