@@ -3,7 +3,7 @@
 </div>
 <h1 align="center">gruvbox-plain</h1>
 
-Editor theme for VSCode and JetBrains IDEs, based on [morhetz/gruvbox](https://github.com/morhetz/gruvbox) but with a plainer color palette for syntax highlighting. The theme comes with two palettes: `gruvbox-plain-warm` and `gruvbox-plain-cold` (latter only available for VSCode).
+Code editor theme for VSCode and JetBrains IDEs, based on [morhetz/gruvbox](https://github.com/morhetz/gruvbox) but with a plainer color palette for syntax highlighting. The theme comes with two palettes: `gruvbox-plain-warm` and `gruvbox-plain-cold` (latter only available for VSCode).
 
 ## Color Scheme
 
