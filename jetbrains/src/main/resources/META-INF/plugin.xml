@@ -7,7 +7,7 @@
     <themeProvider id="dev.hermannm.gruvbox-plain" path="/gruvbox-plain.theme.json"/>
   </extensions>
   <description><![CDATA[
-    <p>Theme based on <a href="https://github.com/morhetz/gruvbox">morhetz/gruvbox</a>, but with a plainer color palette for syntax highlighting.</p>
+    <p>Editor theme based on <a href="https://github.com/morhetz/gruvbox">morhetz/gruvbox</a>, but with a plainer color palette for syntax highlighting.</p>
     <h3>Color Scheme</h3>
     <p>gruvbox-plain uses a limited subset of the gruvbox dark mode color palette for syntax highlighting. The table below shows the general usage of the different colors.</p>
     <table>
