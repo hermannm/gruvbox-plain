@@ -5,6 +5,15 @@
 
 Code editor theme for VSCode and JetBrains IDEs, based on [morhetz/gruvbox](https://github.com/morhetz/gruvbox) but with a plainer color palette for syntax highlighting. The theme comes with two palettes: `gruvbox-plain-warm` and `gruvbox-plain-cold` (latter only available for VSCode).
 
+## VSCode Installation
+
+1. Download the latest `.vsix` file from [Releases](https://github.com/hermannm/gruvbox-plain/releases)
+2. Go to `Extensions` tab in VSCode
+3. Click `...` in the top right of the tab
+4. Click `Install from VSIX...`, and select the downloaded `.vsix` file
+
+Now `gruvbox-plain-warm` and `gruvbox-plain-cold` should be available as color themes!
+
 ## Color Scheme
 
 gruvbox-plain uses a limited subset of the gruvbox dark mode color palette for syntax highlighting. The table below shows the general usage of the different colors.
