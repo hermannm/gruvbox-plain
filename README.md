@@ -12,7 +12,7 @@ Code editor theme for VSCode and JetBrains IDEs, based on [morhetz/gruvbox](http
 3. Click `...` in the top right of the tab
 4. Click `Install from VSIX...`, and select the downloaded `.vsix` file
 
-Now `gruvbox-plain-warm` and `gruvbox-plain-cold` should be available as color themes!
+Now `gruvbox-plain-warm` and `gruvbox-plain-cold` should be available as color themes! I recommend installing [Gruvbox Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=JonathanHarty.gruvbox-material-icon-theme) as well to complete the theme.
 
 ## Color Scheme
 
