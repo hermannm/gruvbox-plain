@@ -2,7 +2,7 @@
   "name": "gruvbox-plain-warm",
   "dark": true,
   "author": "hermannm",
-  "editorScheme": "/gruvbox-plain-warm_scheme.xml",
+  "editorScheme": "/gruvbox-plain-warm-scheme.xml",
   "colors": {
     "bg0": "#282828",
     "bg0_h": "#1d2021",
