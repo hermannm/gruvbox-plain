@@ -3,6 +3,7 @@
   <name>gruvbox-plain</name>
   <vendor email="hermann.morkrid@gmail.com" url="https://github.com/hermannm">hermannm</vendor>
   <depends>com.intellij.modules.platform</depends>
+  <depends config-file="java-extensions.xml" optional="true">com.intellij.java</depends>
   <extensions defaultExtensionNs="com.intellij">
     <themeProvider id="dev.hermannm.gruvbox-plain.warm" path="/gruvbox-plain-warm.theme.json"/>
     <themeProvider id="dev.hermannm.gruvbox-plain.cold" path="/gruvbox-plain-cold.theme.json"/>
