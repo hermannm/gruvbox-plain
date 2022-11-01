@@ -1,12 +1,5 @@
 <scheme name="gruvbox-plain-cold" version="142" parent_scheme="Darcula">
   <option name="FONT_SCALE" value="1.0" />
-  <metaInfo>
-    <property name="created">2022-11-01T02:26:10</property>
-    <property name="ide">Idea</property>
-    <property name="ideVersion">2022.3.0.0</property>
-    <property name="modified">2022-11-01T02:26:18</property>
-    <property name="originalScheme">_@user_gruvbox-plain-cold</property>
-  </metaInfo>
   <option name="LINE_SPACING" value="1.2" />
   <option name="EDITOR_FONT_SIZE" value="14" />
   <option name="EDITOR_FONT_NAME" value="Consolas" />
@@ -94,7 +87,7 @@
         <option name="FOREGROUND" value="ebdbb2" />
       </value>
     </option>
-    <option name="ANNOTATION_NAME_ATTRIBUTES" baseAttributes="DEFAULT_METADATA" />
+    <option name="ANNOTATION_NAME_ATTRIBUTES" baseAttributes="" />
     <option name="ANONYMOUS_CLASS_NAME_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="83a598" />
@@ -295,13 +288,13 @@
         <option name="FOREGROUND" value="ebdbb2" />
       </value>
     </option>
-    <option name="CSS.IMPORTANT" baseAttributes="" />
+    <option name="CSS.IMPORTANT" baseAttributes="DEFAULT_KEYWORD" />
     <option name="CSS.PSEUDO">
       <value>
         <option name="FOREGROUND" value="83a598" />
       </value>
     </option>
-    <option name="CSS.URL" baseAttributes="" />
+    <option name="CSS.URL" baseAttributes="HTML_ATTRIBUTE_VALUE" />
     <option name="CTRL_CLICKABLE">
       <value>
         <option name="FOREGROUND" value="83a598" />
@@ -517,7 +510,7 @@
     </option>
     <option name="DEFAULT_OPERATION_SIGN">
       <value>
-        <option name="FOREGROUND" value="d3869b" />
+        <option name="FOREGROUND" value="a89984" />
       </value>
     </option>
     <option name="DEFAULT_PARAMETER">
@@ -778,7 +771,6 @@
         <option name="FOREGROUND" value="a89984" />
       </value>
     </option>
-    <option name="KOTLIN_LABEL" baseAttributes="DEFAULT_LABEL" />
     <option name="KOTLIN_MUTABLE_VARIABLE">
       <value>
         <option name="EFFECT_TYPE" value="1" />
@@ -789,7 +781,6 @@
         <option name="FOREGROUND" value="ebdbb2" />
       </value>
     </option>
-    <option name="KOTLIN_PACKAGE_FUNCTION_CALL" baseAttributes="DEFAULT_STATIC_METHOD" />
     <option name="KOTLIN_QUEST">
       <value>
         <option name="FOREGROUND" value="d3869b" />
@@ -800,7 +791,6 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
-    <option name="KOTLIN_TYPE_PARAMETER" baseAttributes="TYPE_PARAMETER_NAME_ATTRIBUTES" />
     <option name="LOG_ERROR_OUTPUT">
       <value>
         <option name="FOREGROUND" value="fb4934" />
@@ -816,7 +806,6 @@
         <option name="FOREGROUND" value="fabd2f" />
       </value>
     </option>
-    <option name="List/map to object conversion" baseAttributes="JAVA_NUMBER" />
     <option name="MATCHED_BRACE_ATTRIBUTES">
       <value>
         <option name="BACKGROUND" value="504945" />
@@ -1044,6 +1033,22 @@
         <option name="FOREGROUND" value="f9f5d7" />
       </value>
     </option>
+    <option name="ReSharper.HINT">
+      <value>
+        <option name="EFFECT_COLOR" value="83a598" />
+        <option name="EFFECT_TYPE" value="5" />
+      </value>
+    </option>
+    <option name="ReSharper.NAMESPACE_IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="83a598" />
+      </value>
+    </option>
+    <option name="ReSharper.STRING_ESCAPE_CHARACTER_2">
+      <value>
+        <option name="FOREGROUND" value="d3869b" />
+      </value>
+    </option>
     <option name="SASS_MIXIN">
       <value>
         <option name="FOREGROUND" value="fb4934" />
@@ -1101,6 +1106,13 @@
         <option name="FOREGROUND" value="b8bb26" />
       </value>
     </option>
+    <option name="SUGGESTION">
+      <value>
+        <option name="EFFECT_COLOR" value="83a598" />
+        <option name="ERROR_STRIPE_COLOR" value="83a598" />
+        <option name="EFFECT_TYPE" value="2" />
+      </value>
+    </option>
     <option name="TEMPLATE_VARIABLE_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="d5c4a1" />
@@ -1147,7 +1159,6 @@
         <option name="EFFECT_TYPE" value="2" />
       </value>
     </option>
-    <option name="Unresolved reference access" baseAttributes="DEFAULT_IDENTIFIER" />
     <option name="WARNING_ATTRIBUTES">
       <value>
         <option name="EFFECT_COLOR" value="fabd2f" />
