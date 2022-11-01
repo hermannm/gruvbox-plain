@@ -4,7 +4,8 @@
   <vendor email="hermann.morkrid@gmail.com" url="https://github.com/hermannm">hermannm</vendor>
   <depends>com.intellij.modules.platform</depends>
   <extensions defaultExtensionNs="com.intellij">
-    <themeProvider id="dev.hermannm.gruvbox-plain" path="/gruvbox-plain.theme.json"/>
+    <themeProvider id="dev.hermannm.gruvbox-plain.warm" path="/gruvbox-plain-warm.theme.json"/>
+    <themeProvider id="dev.hermannm.gruvbox-plain.cold" path="/gruvbox-plain-cold.theme.json"/>
   </extensions>
   <description><![CDATA[
     <p>Theme based on <a href="https://github.com/morhetz/gruvbox">morhetz/gruvbox</a>, but with a plainer color palette for syntax highlighting.</p>
@@ -12,65 +13,113 @@
     <p>gruvbox-plain uses a limited subset of the gruvbox dark mode color palette for syntax highlighting. The table below shows the general usage of the different colors.</p>
     <table>
       <tr>
-        <th>Hex</th>
-        <th>Color</th>
-        <th>Usage</th>
+        <th style="text-align:right">Usage</th>
+        <th><code>gruvbox-plain-warm</code></th>
+        <th><code>gruvbox-plain-cold</code></th>
       </tr>
       <tr>
-        <td><code>#ebdbb2</code></td>
+        <td style="text-align:right">Variables, properties, plain text</td>
         <td style="text-align:center">
+          <code>#ebdbb2</code>
+          <br>
           <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/ebdbb2.png?raw=true" />
         </td>
-        <td>Variables, properties, plain text</td>
+        <td style="text-align:center">
+          <code>#ebdbb2</code>
+          <br>
+          <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/ebdbb2.png?raw=true" />
+        </td>
       </tr>
       <tr>
-        <td><code>#fe8019</code></td>
+        <td style="text-align:right">Keywords, operators</td>
         <td style="text-align:center">
+          <code>#fe8019</code>
+          <br>
           <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/fe8019.png?raw=true" />
         </td>
-        <td>Keywords, operators</td>
+        <td style="text-align:center">
+          <code>#d3869b</code>
+          <br>
+          <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/d3869b.png?raw=true" />
+        </td>
       </tr>
       <tr>
-        <td><code>#fabd2f</code></td>
+        <td style="text-align:right">Types, classes, namespaces, components, tags</td>
         <td style="text-align:center">
+          <code>#fabd2f</code>
+          <br>
           <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/fabd2f.png?raw=true" />
         </td>
-        <td>Types, classes, namespaces, components, tags</td>
+        <td style="text-align:center">
+          <code>#83a598</code>
+          <br>
+          <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/83a598.png?raw=true" />
+        </td>
       </tr>
       <tr>
-        <td><code>#b8bb26</code></td>
+        <td style="text-align:right">Functions, methods</td>
         <td style="text-align:center">
+          <code>#b8bb26</code>
+          <br>
           <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/b8bb26.png?raw=true" />
         </td>
-        <td>Functions, methods</td>
+        <td style="text-align:center">
+          <code>#b8bb26</code>
+          <br>
+          <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/b8bb26.png?raw=true" />
+        </td>
       </tr>
       <tr>
-        <td><code>#8ec07c</code></td>
+        <td style="text-align:right">Values, language constants</td>
         <td style="text-align:center">
+          <code>#8ec07c</code>
+          <br>
           <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/8ec07c.png?raw=true" />
         </td>
-        <td>Values, language constants</td>
+        <td style="text-align:center">
+          <code>#8ec07c</code>
+          <br>
+          <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/8ec07c.png?raw=true" />
+        </td>
       </tr>
       <tr>
-        <td><code>#a89984</code></td>
+        <td style="text-align:right">Punctuation</td>
         <td style="text-align:center">
+          <code>#a89984</code>
+          <br>
           <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/a89984.png?raw=true" />
         </td>
-        <td>Punctuation</td>
+        <td style="text-align:center">
+          <code>#a89984</code>
+          <br>
+          <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/a89984.png?raw=true" />
+        </td>
       </tr>
       <tr>
-        <td><code>#928374</code></td>
+        <td style="text-align:right">Comments, documentation</td>
         <td style="text-align:center">
+          <code>#928374</code>
+          <br>
           <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/928374.png?raw=true" />
         </td>
-        <td>Comments, documentation</td>
+        <td style="text-align:center">
+          <code>#928374</code>
+          <br>
+          <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/928374.png?raw=true" />
+        </td>
       </tr>
       <tr>
-        <td><code>#282828</code></td>
+        <td style="text-align:right">Background color</td>
         <td style="text-align:center">
+          <code>#282828</code>
+          <br>
           <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/282828.png?raw=true" />
         </td>
-        <td>Background color</td>
+        <td style="text-align:center">
+          <code>#282828</code>
+          <br>
+          <img src="https://github.com/hermannm/gruvbox-plain/blob/docs/assets/colors/282828.png?raw=true" />
+        </td>
       </tr>
     </table>
     <p>For edge cases in languages where these may not apply, the color deemed most appropriate has been chosen. This can always be overridden in <em>Preferences -> Editor -> Color Scheme</em> in your IDE.</p>
