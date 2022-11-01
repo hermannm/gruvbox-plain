@@ -1,13 +1,14 @@
 plugins {
-    id("org.jetbrains.intellij") version "1.3.1"
+    id("org.jetbrains.intellij") version "1.10.0-SNAPSHOT"
     kotlin("jvm") version "1.5.10"
 }
 
 group = "dev.hermannm"
-version = "0.1.0"
+version = "0.2.0"
 
 repositories {
     mavenCentral()
+    maven("https://www.jetbrains.com/intellij-repository/snapshots")
 }
 
 dependencies {
@@ -16,8 +17,9 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version.set("2021.3.1")
+    version.set("223-EAP-SNAPSHOT")
 }
+
 tasks {
     patchPluginXml {
         changeNotes.set("in development, unstable")
