@@ -6,25 +6,27 @@ import com.intellij.openapi.fileTypes.SyntaxHighlighter
 import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.openapi.options.colors.ColorSettingsPage
+import dev.hermannm.gruvbox_plain.SharedColorSettings
 import javax.swing.Icon
-import dev.hermannm.gruvbox_plain.getAttributeDescriptors
-import dev.hermannm.gruvbox_plain.mapDemoTextTagToHighlighting
 
 class KotlinColorSettingsPage : ColorSettingsPage {
-    override fun getAttributeDescriptors(): Array<AttributesDescriptor> = getAttributeDescriptors(kotlinLanguageConfig)
-
-    override fun getDisplayName(): String = "Kotlin (Primitives & Constants)"
+    override fun getDisplayName(): String = "Kotlin (gruvbox-plain)"
 
     override fun getDemoText(): String {
         return """
-            val isDemo: <kotlin-primitive>Boolean</kotlin-primitive> = <kotlin-language-constant>true</kotlin-language-constant>
+            val isDemo: <primitive-type>Boolean</primitive-type> = <language-constant>true</language-constant>
         """.trimIndent()
     }
     
     override fun getHighlighter(): SyntaxHighlighter = PlainSyntaxHighlighter()
 
-    override fun getAdditionalHighlightingTagToDescriptorMap(): Map<String, TextAttributesKey> =
-        mapDemoTextTagToHighlighting(kotlinLanguageConfig)
+    override fun getAttributeDescriptors(): Array<AttributesDescriptor> {
+        return SharedColorSettings.attributeDescriptors
+    }
+
+    override fun getAdditionalHighlightingTagToDescriptorMap(): Map<String, TextAttributesKey> {
+        return SharedColorSettings.additionalHighlightingTagToDescriptorMap
+    }
 
     override fun getIcon(): Icon? = null
 

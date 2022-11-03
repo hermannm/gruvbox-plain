@@ -3,40 +3,38 @@ package dev.hermannm.gruvbox_plain.csharp
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.Annotator
 import com.intellij.psi.PsiElement
-import dev.hermannm.gruvbox_plain.LanguageConfig
-import dev.hermannm.gruvbox_plain.findCustomHighlighting
+import dev.hermannm.gruvbox_plain.languageConstantHighlighting
+import dev.hermannm.gruvbox_plain.primitiveTypeHighlighting
+import dev.hermannm.gruvbox_plain.punctuationHighlighting
 import dev.hermannm.gruvbox_plain.highlightElement
-
-internal val csharpLanguageConfig = LanguageConfig(
-    name = "CSharp",
-    constantKeywords = arrayOf("this", "true", "false", "null"),
-    primitiveKeywords = arrayOf(
-        "object",
-        "string",
-        "dynamic",
-        "bool",
-        "byte",
-        "sbyte",
-        "char",
-        "decimal",
-        "double",
-        "float",
-        "int",
-        "uint",
-        "nint",
-        "nuint",
-        "long",
-        "long",
-        "ulong",
-        "short",
-        "ushort",
-        "void"
-    ),
-)
 
 class CsharpAnnotator : Annotator {
     override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
-        val highlighting = findCustomHighlighting(element, csharpLanguageConfig) ?: return
+        val highlighting = when (element.text) {
+            "this", "true", "false", "null" -> languageConstantHighlighting
+            "object",
+            "string",
+            "dynamic",
+            "bool",
+            "byte",
+            "sbyte",
+            "char",
+            "decimal",
+            "double",
+            "float",
+            "int",
+            "uint",
+            "nint",
+            "nuint",
+            "long",
+            "ulong",
+            "short",
+            "ushort",
+            "void" -> primitiveTypeHighlighting
+            "<", ">" -> punctuationHighlighting
+            else -> return
+        }
+
         highlightElement(highlighting, element, annotationHolder)
     }
 }

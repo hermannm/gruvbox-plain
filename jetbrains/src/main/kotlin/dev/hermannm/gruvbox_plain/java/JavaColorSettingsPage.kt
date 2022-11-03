@@ -6,25 +6,27 @@ import com.intellij.openapi.fileTypes.SyntaxHighlighter
 import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.openapi.options.colors.ColorSettingsPage
+import dev.hermannm.gruvbox_plain.SharedColorSettings
 import javax.swing.Icon
-import dev.hermannm.gruvbox_plain.getAttributeDescriptors
-import dev.hermannm.gruvbox_plain.mapDemoTextTagToHighlighting
 
 class JavaColorSettingsPage : ColorSettingsPage {
-    override fun getAttributeDescriptors(): Array<AttributesDescriptor> = getAttributeDescriptors(javaLanguageConfig)
-
-    override fun getDisplayName(): String = "Java (Primitives & Constants)"
+    override fun getDisplayName(): String = "Java (gruvbox-plain)"
 
     override fun getDemoText(): String {
         return """
-            <java-primitive>boolean</java-primitive> isDemo = <java-language-constant>true</java-language-constant>;
+            <primitive-type>boolean</primitive-type> isDemo = <language-constant>true</language-constant>;
         """.trimIndent()
     }
 
     override fun getHighlighter(): SyntaxHighlighter = JavaFileHighlighter()
 
-    override fun getAdditionalHighlightingTagToDescriptorMap(): Map<String, TextAttributesKey> =
-        mapDemoTextTagToHighlighting(javaLanguageConfig)
+    override fun getAttributeDescriptors(): Array<AttributesDescriptor> {
+        return SharedColorSettings.attributeDescriptors
+    }
+
+    override fun getAdditionalHighlightingTagToDescriptorMap(): Map<String, TextAttributesKey> {
+        return SharedColorSettings.additionalHighlightingTagToDescriptorMap
+    }
 
     override fun getIcon(): Icon? = null
 
