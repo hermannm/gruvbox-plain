@@ -1,0 +1,13 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator
+            language="JAVA"
+            implementationClass="dev.hermannm.gruvbox_plain.java.JavaAnnotator"
+            order="first"
+        />
+        <colorSettingsPage
+            implementation="dev.hermannm.gruvbox_plain.java.JavaColorSettingsPage"
+            order="first"
+        />
+    </extensions>
+</idea-plugin>
