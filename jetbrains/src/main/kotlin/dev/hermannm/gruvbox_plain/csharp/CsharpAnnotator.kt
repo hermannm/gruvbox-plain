@@ -30,7 +30,8 @@ class CsharpAnnotator : Annotator {
             "ulong",
             "short",
             "ushort",
-            "void" -> primitiveTypeHighlighting
+            "void",
+            "=>" -> primitiveTypeHighlighting
             "<", ">" -> punctuationHighlighting
             else -> return
         }
