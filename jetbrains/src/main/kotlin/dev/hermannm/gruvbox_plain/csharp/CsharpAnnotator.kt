@@ -12,7 +12,7 @@ import dev.hermannm.gruvbox_plain.highlightElement
 class CsharpAnnotator : Annotator {
     override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
         val highlighting = when (element.text) {
-            "=>" -> keywordHighlighting
+            "=>", "?", "!" -> keywordHighlighting
             "this", "true", "false", "null" -> languageConstantHighlighting
             "object",
             "string",
