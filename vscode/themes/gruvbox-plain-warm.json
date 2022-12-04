@@ -51,7 +51,8 @@
         "storage.type.primitive",
         "storage.type.annotation",
         "storage.type.cs",
-        "keyword.type"
+        "keyword.type",
+        "variable.other.enummember"
       ]
     },
     {
@@ -122,11 +123,15 @@
         "punctuation.definition.sequence",
         "punctuation.definition.section",
         "punctuation.definition.variables",
+        "punctuation.definition.attribute",
         "punctuation.section.embedded",
         "punctuation.section.function",
         "punctuation.operation.graphql",
         "keyword.operator.type.annotation",
         "keyword.operator.accessor",
+        "keyword.operator.access",
+        "keyword.operator.namespace",
+        "keyword.operator.key-value",
         "constant.character.format.placeholder.other",
         "constant.character.escape.continuation",
         "meta.brace"
@@ -149,7 +154,11 @@
     }
   ],
   "semanticTokenColors": {
-    "operatorOverloaded": "#fe8019"
+    "operatorOverloaded": "#fe8019",
+    "selfKeyword": "#8ec07c",
+    "decorator": "#fabd2f",
+    "builtinAttribute": "#fabd2f",
+    "generic.attribute": "#fabd2f"
   },
   "colors": {
     "focusBorder": "#3c3836",
