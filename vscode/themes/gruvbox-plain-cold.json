@@ -280,6 +280,9 @@
     "editorWarning.foreground": "#d79921",
     "editorInfo.foreground": "#458588",
 
+    "editorInlayHint.foreground": "#928374",
+    "editorInlayHint.background": "#3c3836",
+
     "diffEditor.insertedTextBackground": "#b8bb2630",
     "diffEditor.removedTextBackground": "#fb493430",
 
