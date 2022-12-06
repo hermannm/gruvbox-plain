@@ -51,8 +51,10 @@
         "storage.type.primitive",
         "storage.type.annotation",
         "storage.type.cs",
+        "storage.modifier.lifetime",
         "keyword.type",
-        "variable.other.enummember"
+        "variable.other.enummember",
+        "punctuation.definition.lifetime"
       ]
     },
     {
