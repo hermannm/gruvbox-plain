@@ -154,7 +154,8 @@
     "decorator": "#83a598",
     "generic.attribute": "#83a598",
     "operatorOverloaded": "#d3869b",
-    "selfKeyword": "#8ec07c"
+    "selfKeyword": "#8ec07c",
+    "variable.callable": "#b8bb26"
   },
   "colors": {
     "focusBorder": "#3c3836",
