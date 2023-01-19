@@ -22,9 +22,17 @@ val punctuationHighlighting = TextAttributesKey.createTextAttributesKey(
     "CUSTOM_PUNCTUATION", DefaultLanguageHighlighterColors.BRACES
 )
 
-fun highlightElement(highlighting: TextAttributesKey, element: PsiElement, annotationHolder: AnnotationHolder) {
+fun highlightElement(element: PsiElement, highlighting: TextAttributesKey, annotationHolder: AnnotationHolder) {
     annotationHolder.newSilentAnnotation(HighlightSeverity.INFORMATION)
         .range(element)
         .textAttributes(highlighting)
         .create()
+}
+
+fun genericBracketHighlighting(element: PsiElement, typeArgumentListElementName: String): TextAttributesKey? {
+    return if (element.parent.javaClass.simpleName == typeArgumentListElementName) {
+        punctuationHighlighting
+    } else {
+        null
+    }
 }

@@ -254,7 +254,12 @@
     </option>
     <option name="CONSTRUCTOR_CALL_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="b8bb26" />
+        <option name="FOREGROUND" value="83a598" />
+      </value>
+    </option>
+    <option name="CONSTRUCTOR_DECLARATION_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="83a598" />
       </value>
     </option>
     <option name="CSS.CLASS_NAME">
@@ -694,7 +699,7 @@
     </option>
     <option name="IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="83a598" />
+        <option name="FOREGROUND" value="ebdbb2" />
       </value>
     </option>
     <option name="INACTIVE_HYPERLINK_ATTRIBUTES">
