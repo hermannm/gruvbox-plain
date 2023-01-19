@@ -1,5 +1,5 @@
 plugins {
-    id("org.jetbrains.intellij") version "1.11.0"
+    id("org.jetbrains.intellij") version "1.12.0"
     kotlin("jvm") version "1.5.10"
 }
 
@@ -8,10 +8,6 @@ version = "0.2.0"
 
 repositories {
     mavenCentral()
-}
-
-dependencies {
-    implementation(kotlin("stdlib"))
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
