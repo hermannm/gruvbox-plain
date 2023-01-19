@@ -3,23 +3,24 @@ package dev.hermannm.gruvbox_plain.kotlin
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.Annotator
 import com.intellij.psi.PsiElement
-import dev.hermannm.gruvbox_plain.genericBracketHighlighting
-import dev.hermannm.gruvbox_plain.highlightElement
+import dev.hermannm.gruvbox_plain.highlight
+import dev.hermannm.gruvbox_plain.isGenericBracket
 import dev.hermannm.gruvbox_plain.keywordHighlighting
 import dev.hermannm.gruvbox_plain.languageConstantHighlighting
 import dev.hermannm.gruvbox_plain.primitiveTypeHighlighting
+import dev.hermannm.gruvbox_plain.punctuationHighlighting
 
 class KotlinAnnotator : Annotator {
     override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
         val highlighting = when (element.text) {
             "?:", "=" -> keywordHighlighting
             "this", "true", "false", "null" -> languageConstantHighlighting
-            "<", ">" -> genericBracketHighlighting(element, "KtTypeArgumentList") ?: return
+            "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
             "." -> return
             else -> if (element.isPackagePathElement()) primitiveTypeHighlighting else return
         }
 
-        highlightElement(element, highlighting, annotationHolder)
+        element.highlight(highlighting, annotationHolder)
     }
 }
 

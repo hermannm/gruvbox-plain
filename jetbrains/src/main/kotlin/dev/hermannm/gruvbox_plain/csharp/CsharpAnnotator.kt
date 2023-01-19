@@ -3,11 +3,12 @@ package dev.hermannm.gruvbox_plain.csharp
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.Annotator
 import com.intellij.psi.PsiElement
-import dev.hermannm.gruvbox_plain.genericBracketHighlighting
-import dev.hermannm.gruvbox_plain.highlightElement
+import dev.hermannm.gruvbox_plain.highlight
+import dev.hermannm.gruvbox_plain.isGenericBracket
 import dev.hermannm.gruvbox_plain.keywordHighlighting
 import dev.hermannm.gruvbox_plain.languageConstantHighlighting
 import dev.hermannm.gruvbox_plain.primitiveTypeHighlighting
+import dev.hermannm.gruvbox_plain.punctuationHighlighting
 
 class CsharpAnnotator : Annotator {
     override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
@@ -33,10 +34,10 @@ class CsharpAnnotator : Annotator {
             "short",
             "ushort",
             "void" -> primitiveTypeHighlighting
-            "<", ">" -> genericBracketHighlighting(element, "CSharpTypeArgList") ?: return
+            "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
             else -> return
         }
 
-        highlightElement(element, highlighting, annotationHolder)
+        element.highlight(highlighting, annotationHolder)
     }
 }

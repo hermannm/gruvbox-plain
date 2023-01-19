@@ -5,6 +5,7 @@ import com.intellij.lang.annotation.HighlightSeverity
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
+import com.intellij.psi.PsiWhiteSpace
 
 val keywordHighlighting = TextAttributesKey.createTextAttributesKey(
     "CUSTOM_KEYWORD", DefaultLanguageHighlighterColors.KEYWORD
@@ -22,17 +23,13 @@ val punctuationHighlighting = TextAttributesKey.createTextAttributesKey(
     "CUSTOM_PUNCTUATION", DefaultLanguageHighlighterColors.BRACES
 )
 
-fun highlightElement(element: PsiElement, highlighting: TextAttributesKey, annotationHolder: AnnotationHolder) {
+fun PsiElement.highlight(highlighting: TextAttributesKey, annotationHolder: AnnotationHolder) {
     annotationHolder.newSilentAnnotation(HighlightSeverity.INFORMATION)
-        .range(element)
+        .range(this)
         .textAttributes(highlighting)
         .create()
 }
 
-fun genericBracketHighlighting(element: PsiElement, typeArgumentListElementName: String): TextAttributesKey? {
-    return if (element.parent.javaClass.simpleName == typeArgumentListElementName) {
-        punctuationHighlighting
-    } else {
-        null
-    }
+fun PsiElement.isGenericBracket(): Boolean {
+    return this.prevSibling !is PsiWhiteSpace
 }
