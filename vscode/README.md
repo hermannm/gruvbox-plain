@@ -1,4 +1,4 @@
-Theme based on [`morhetz/gruvbox`](https://github.com/morhetz/gruvbox), but with a plainer color palette for syntax highlighting. The theme comes with two palettes: `gruvbox-plain-warm` and `gruvbox-plain-cold`.
+Theme based on [`morhetz/gruvbox`](https://github.com/morhetz/gruvbox), but with a plainer color palette for syntax highlighting. The theme comes with two palettes: `gruvbox-plain-cold` and `gruvbox-plain-warm`.
 
 ## Color Scheme
 
