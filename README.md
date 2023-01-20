@@ -34,7 +34,7 @@ For edge cases in languages where these may not apply, the color deemed most app
 <p align="center">
     <img alt="gruvbox-plain-cold" src="https://github.com/hermannm/gruvbox-plain/blob/assets/gruvbox-plain-cold-vscode.png?raw=true">
     <br />
-    <code>gruvbox-plain-cold</code><em> in VSCode</em>
+    <code>gruvbox-plain-cold</code> in VSCode
 </p>
 
 <br />
@@ -42,7 +42,7 @@ For edge cases in languages where these may not apply, the color deemed most app
 <p align="center">
   <img alt="gruvbox-plain-warm" src="https://github.com/hermannm/gruvbox-plain/blob/assets/gruvbox-plain-warm-intellij.png?raw=true">
   <br />
-  <code>gruvbox-plain-warm</code><em> in IntelliJ</em>
+  <code>gruvbox-plain-warm</code> in IntelliJ
 </p>
 
 ## Installation
