@@ -11,7 +11,8 @@
         "entity.other.attribute-name",
         "support.constant.property",
         "support.type.property-name",
-        "variable"
+        "variable",
+        "variable.other.enummember.c"
       ]
     },
     {
