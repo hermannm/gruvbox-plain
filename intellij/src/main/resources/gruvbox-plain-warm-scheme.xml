@@ -1157,6 +1157,11 @@
         <option name="FOREGROUND" value="ebdbb2" />
       </value>
     </option>
+    <option name="XML_CUSTOM_TAG_NAME">
+      <value>
+        <option name="FOREGROUND" value="fabd2f" />
+      </value>
+    </option>
     <option name="XML_ENTITY_REFERENCE" baseAttributes="DEFAULT_ENTITY" />
     <option name="XML_NS_PREFIX">
       <value>

@@ -1244,7 +1244,7 @@
     </option>
     <option name="XML_CUSTOM_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="d3869b" />
+        <option name="FOREGROUND" value="83a598" />
       </value>
     </option>
     <option name="XML_ENTITY_REFERENCE" baseAttributes="DEFAULT_ENTITY" />
@@ -1261,7 +1261,7 @@
     </option>
     <option name="XML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="d3869b" />
+        <option name="FOREGROUND" value="83a598" />
       </value>
     </option>
     <option name="YAML_ANCHOR">
