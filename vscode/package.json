@@ -23,14 +23,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "gruvbox-plain-warm",
-        "uiTheme": "vs-dark",
-        "path": "./themes/gruvbox-plain-warm.json"
-      },
-      {
         "label": "gruvbox-plain-cold",
         "uiTheme": "vs-dark",
-        "path": "./themes/gruvbox-plain-cold.json"
+        "path": "./themes/gruvbox-plain-cold-color-theme.json"
+      },
+      {
+        "label": "gruvbox-plain-warm",
+        "uiTheme": "vs-dark",
+        "path": "./themes/gruvbox-plain-warm-color-theme.json"
       }
     ]
   }
