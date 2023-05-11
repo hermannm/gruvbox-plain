@@ -7,6 +7,7 @@
       "name": "variables, properties, plain text",
       "settings": { "foreground": "#ebdbb2" },
       "scope": [
+        "entity.name.function.sql",
         "entity.name.tag.yaml",
         "entity.other.attribute-name",
         "support.constant.property",
@@ -51,6 +52,7 @@
         "storage.type.built-in.primitive",
         "storage.type.cs",
         "storage.type.primitive",
+        "storage.type.sql",
         "support.class",
         "support.type",
         "variable.other.enummember"
