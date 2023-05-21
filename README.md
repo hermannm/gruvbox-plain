@@ -1,4 +1,4 @@
-![gruvbox-plain logo with cold color scheme](https://github.com/hermannm/gruvbox-plain/blob/assets/logos/gruvbox-plain-cold.png?raw=true)![gruvbox-plain logo with warm color scheme](https://github.com/hermannm/gruvbox-plain/blob/assets/logos/gruvbox-plain-warm.png?raw=true)
+<img alt="gruvbox-plain logo with cold color scheme" width="75" height="75" src="https://github.com/hermannm/gruvbox-plain/blob/assets/logos/gruvbox-plain-cold.png?raw=true" /><img alt="gruvbox-plain logo with warm color scheme" width="75" height="75" src="https://github.com/hermannm/gruvbox-plain/blob/assets/logos/gruvbox-plain-warm.png?raw=true" />
 
 # gruvbox-plain
 
