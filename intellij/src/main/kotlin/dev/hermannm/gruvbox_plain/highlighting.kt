@@ -11,8 +11,8 @@ val keywordHighlighting = TextAttributesKey.createTextAttributesKey(
     "CUSTOM_KEYWORD", DefaultLanguageHighlighterColors.KEYWORD
 )
 
-val primitiveTypeHighlighting = TextAttributesKey.createTextAttributesKey(
-    "CUSTOM_PRIMITIVE_TYPE", DefaultLanguageHighlighterColors.CLASS_NAME
+val typeHighlighting = TextAttributesKey.createTextAttributesKey(
+    "CUSTOM_TYPE", DefaultLanguageHighlighterColors.CLASS_NAME
 )
 
 val languageConstantHighlighting = TextAttributesKey.createTextAttributesKey(

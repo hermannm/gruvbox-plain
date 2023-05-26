@@ -7,7 +7,7 @@ import dev.hermannm.gruvbox_plain.highlight
 import dev.hermannm.gruvbox_plain.isGenericBracket
 import dev.hermannm.gruvbox_plain.keywordHighlighting
 import dev.hermannm.gruvbox_plain.languageConstantHighlighting
-import dev.hermannm.gruvbox_plain.primitiveTypeHighlighting
+import dev.hermannm.gruvbox_plain.typeHighlighting
 import dev.hermannm.gruvbox_plain.punctuationHighlighting
 
 class JavaAnnotator : Annotator {
@@ -15,7 +15,7 @@ class JavaAnnotator : Annotator {
         val highlighting = when (element.text) {
             "->" -> keywordHighlighting
             "this", "true", "false", "null" -> languageConstantHighlighting
-            "char", "boolean", "int", "float", "double", "long", "short", "byte", "void" -> primitiveTypeHighlighting
+            "char", "boolean", "int", "float", "double", "long", "short", "byte", "void" -> typeHighlighting
             "::" -> punctuationHighlighting
             "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
             else -> return

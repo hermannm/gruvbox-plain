@@ -7,7 +7,7 @@ import dev.hermannm.gruvbox_plain.highlight
 import dev.hermannm.gruvbox_plain.isGenericBracket
 import dev.hermannm.gruvbox_plain.keywordHighlighting
 import dev.hermannm.gruvbox_plain.languageConstantHighlighting
-import dev.hermannm.gruvbox_plain.primitiveTypeHighlighting
+import dev.hermannm.gruvbox_plain.typeHighlighting
 import dev.hermannm.gruvbox_plain.punctuationHighlighting
 
 class KotlinAnnotator : Annotator {
@@ -17,7 +17,7 @@ class KotlinAnnotator : Annotator {
             "this", "true", "false", "null" -> languageConstantHighlighting
             "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
             "." -> return
-            else -> if (element.isPackagePathElement()) primitiveTypeHighlighting else return
+            else -> if (element.isPackagePathElement()) typeHighlighting else return
         }
 
         element.highlight(highlighting, annotationHolder)

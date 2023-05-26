@@ -7,7 +7,7 @@ import dev.hermannm.gruvbox_plain.highlight
 import dev.hermannm.gruvbox_plain.isGenericBracket
 import dev.hermannm.gruvbox_plain.keywordHighlighting
 import dev.hermannm.gruvbox_plain.languageConstantHighlighting
-import dev.hermannm.gruvbox_plain.primitiveTypeHighlighting
+import dev.hermannm.gruvbox_plain.typeHighlighting
 import dev.hermannm.gruvbox_plain.punctuationHighlighting
 
 class CsharpAnnotator : Annotator {
@@ -33,7 +33,7 @@ class CsharpAnnotator : Annotator {
             "ulong",
             "short",
             "ushort",
-            "void" -> primitiveTypeHighlighting
+            "void" -> typeHighlighting
             ":" -> punctuationHighlighting
             "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
             else -> return
