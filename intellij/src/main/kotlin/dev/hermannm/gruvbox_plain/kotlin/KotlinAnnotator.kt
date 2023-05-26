@@ -15,6 +15,7 @@ class KotlinAnnotator : Annotator {
         val highlighting = when (element.text) {
             "?:", "=" -> keywordHighlighting
             "this", "true", "false", "null" -> languageConstantHighlighting
+            "@" -> typeHighlighting
             "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
             "." -> return
             else -> if (element.isPackagePathElement()) typeHighlighting else return
