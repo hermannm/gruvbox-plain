@@ -1,7 +1,7 @@
 package dev.hermannm.gruvbox_plain.kotlin
 
 import com.intellij.openapi.editor.colors.TextAttributesKey
-import com.intellij.openapi.fileTypes.PlainSyntaxHighlighter;
+import com.intellij.openapi.fileTypes.PlainSyntaxHighlighter
 import com.intellij.openapi.fileTypes.SyntaxHighlighter
 import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
@@ -14,10 +14,10 @@ class KotlinColorSettingsPage : ColorSettingsPage {
 
     override fun getDemoText(): String {
         return """
-            val isDemo: <primitive-type>Boolean</primitive-type> = <language-constant>true</language-constant>
+            <keyword>val</keyword> isDemo<punctuation>:</punctuation> <type>Boolean</type> = <value>true</value>
         """.trimIndent()
     }
-    
+
     override fun getHighlighter(): SyntaxHighlighter = PlainSyntaxHighlighter()
 
     override fun getAttributeDescriptors(): Array<AttributesDescriptor> {

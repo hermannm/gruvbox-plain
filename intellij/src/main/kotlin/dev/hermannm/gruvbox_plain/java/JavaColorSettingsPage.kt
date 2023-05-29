@@ -14,7 +14,7 @@ class JavaColorSettingsPage : ColorSettingsPage {
 
     override fun getDemoText(): String {
         return """
-            <primitive-type>boolean</primitive-type> isDemo = <language-constant>true</language-constant>;
+            <type>boolean</type> isDemo <keyword>=</keyword> <value>true</value><punctuation>;</punctuation>
         """.trimIndent()
     }
 

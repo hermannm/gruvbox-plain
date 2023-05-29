@@ -8,19 +8,23 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiWhiteSpace
 
 val keywordHighlighting = TextAttributesKey.createTextAttributesKey(
-    "CUSTOM_KEYWORD", DefaultLanguageHighlighterColors.KEYWORD
+    "GRUVBOX_PLAIN_KEYWORD",
+    DefaultLanguageHighlighterColors.KEYWORD,
 )
 
 val typeHighlighting = TextAttributesKey.createTextAttributesKey(
-    "CUSTOM_TYPE", DefaultLanguageHighlighterColors.CLASS_NAME
+    "GRUVBOX_PLAIN_TYPE",
+    DefaultLanguageHighlighterColors.CLASS_NAME,
 )
 
-val languageConstantHighlighting = TextAttributesKey.createTextAttributesKey(
-    "CUSTOM_LANGUAGE_CONSTANT", DefaultLanguageHighlighterColors.STRING
+val valueHighlighting = TextAttributesKey.createTextAttributesKey(
+    "GRUVBOX_PLAIN_VALUE",
+    DefaultLanguageHighlighterColors.STRING,
 )
 
 val punctuationHighlighting = TextAttributesKey.createTextAttributesKey(
-    "CUSTOM_PUNCTUATION", DefaultLanguageHighlighterColors.BRACES
+    "GRUVBOX_PLAIN_PUNCTUATION",
+    DefaultLanguageHighlighterColors.BRACES,
 )
 
 fun PsiElement.highlight(highlighting: TextAttributesKey, annotationHolder: AnnotationHolder) {

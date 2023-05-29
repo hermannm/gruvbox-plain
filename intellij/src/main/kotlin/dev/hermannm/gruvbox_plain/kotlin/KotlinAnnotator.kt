@@ -6,15 +6,15 @@ import com.intellij.psi.PsiElement
 import dev.hermannm.gruvbox_plain.highlight
 import dev.hermannm.gruvbox_plain.isGenericBracket
 import dev.hermannm.gruvbox_plain.keywordHighlighting
-import dev.hermannm.gruvbox_plain.languageConstantHighlighting
-import dev.hermannm.gruvbox_plain.typeHighlighting
 import dev.hermannm.gruvbox_plain.punctuationHighlighting
+import dev.hermannm.gruvbox_plain.typeHighlighting
+import dev.hermannm.gruvbox_plain.valueHighlighting
 
 class KotlinAnnotator : Annotator {
     override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
         val highlighting = when (element.text) {
             "?:", "=" -> keywordHighlighting
-            "this", "true", "false", "null" -> languageConstantHighlighting
+            "this", "true", "false", "null" -> valueHighlighting
             "@" -> typeHighlighting
             "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
             "." -> return
@@ -39,8 +39,8 @@ fun PsiElement.isPackagePathElement(): Boolean {
         val topElementClassName = topElement.javaClass.simpleName
 
         if (
-            (topElementClassName == "KtPackageDirective")
-            || (topElementClassName == "KtImportDirective" && bottomElement != middleElement.lastChild)
+            (topElementClassName == "KtPackageDirective") ||
+            (topElementClassName == "KtImportDirective" && bottomElement != middleElement.lastChild)
         ) {
             return true
         }

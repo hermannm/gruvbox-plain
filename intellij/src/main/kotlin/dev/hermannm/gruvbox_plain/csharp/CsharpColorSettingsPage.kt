@@ -1,7 +1,7 @@
 package dev.hermannm.gruvbox_plain.csharp
 
 import com.intellij.openapi.editor.colors.TextAttributesKey
-import com.intellij.openapi.fileTypes.PlainSyntaxHighlighter;
+import com.intellij.openapi.fileTypes.PlainSyntaxHighlighter
 import com.intellij.openapi.fileTypes.SyntaxHighlighter
 import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
@@ -14,7 +14,7 @@ class CsharpColorSettingsPage : ColorSettingsPage {
 
     override fun getDemoText(): String {
         return """
-            <primitive-type>bool</primitive-type> isDemo = <language-constant>true</language-constant>;
+            <type>bool</type> isDemo <keyword>=</keyword> <value>true</value><punctuation>;</punctuation>
         """.trimIndent()
     }
 
