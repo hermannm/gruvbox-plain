@@ -14,7 +14,7 @@ class KotlinColorSettingsPage : ColorSettingsPage {
 
     override fun getDemoText(): String {
         return """
-            <keyword>val</keyword> isDemo<punctuation>:</punctuation> <type>Boolean</type> = <value>true</value>
+            <keyword>val</keyword> isDemo<punctuation>:</punctuation> <type>Boolean</type> <keyword>=</keyword> <value>true</value>
         """.trimIndent()
     }
 

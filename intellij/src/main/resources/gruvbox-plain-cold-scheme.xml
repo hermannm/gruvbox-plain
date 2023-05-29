@@ -758,6 +758,11 @@
         <option name="FOREGROUND" value="a89984" />
       </value>
     </option>
+    <option name="KOTLIN_CONSTRUCTOR">
+      <value>
+        <option name="FOREGROUND" value="83a598" />
+      </value>
+    </option>
     <option name="KOTLIN_DOUBLE_COLON">
       <value>
         <option name="FOREGROUND" value="a89984" />
