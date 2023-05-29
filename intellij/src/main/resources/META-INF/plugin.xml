@@ -1,15 +1,15 @@
 <idea-plugin>
-  <id>dev.hermannm.gruvbox-plain</id>
+  <id>dev.hermannm.gruvboxplain</id>
   <name>gruvbox-plain</name>
   <vendor email="hermann.morkrid@gmail.com" url="https://hermannm.dev">hermannm</vendor>
   <depends>com.intellij.modules.platform</depends>
   <extensions defaultExtensionNs="com.intellij">
-    <themeProvider id="dev.hermannm.gruvbox-plain.warm" path="/gruvbox-plain-warm.theme.json"/>
-    <themeProvider id="dev.hermannm.gruvbox-plain.cold" path="/gruvbox-plain-cold.theme.json"/>
+    <themeProvider id="dev.hermannm.gruvboxplain.warm" path="/gruvbox-plain-warm.theme.json"/>
+    <themeProvider id="dev.hermannm.gruvboxplain.cold" path="/gruvbox-plain-cold.theme.json"/>
   </extensions>
-  <depends optional="true" config-file="gruvboxPlain-withJava.xml">com.intellij.java</depends>
-  <depends optional="true" config-file="gruvboxPlain-withKotlin.xml">org.jetbrains.kotlin</depends>
-  <depends optional="true" config-file="gruvboxPlain-withCsharp.xml">com.intellij.modules.rider</depends>
+  <depends optional="true" config-file="gruvboxplain-java.xml">com.intellij.java</depends>
+  <depends optional="true" config-file="gruvboxplain-kotlin.xml">org.jetbrains.kotlin</depends>
+  <depends optional="true" config-file="gruvboxplain-csharp.xml">com.intellij.modules.rider</depends>
   <description><![CDATA[
     <p>Theme based on <a href="https://github.com/morhetz/gruvbox"><code>morhetz/gruvbox</code></a>, but with a plainer color palette for syntax highlighting. The theme comes with two palettes: <code>gruvbox-plain-cold</code> and <code>gruvbox-plain-warm</code>.</p>
     <h3>Color Scheme</h3>

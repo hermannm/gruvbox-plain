@@ -1,4 +1,4 @@
-package dev.hermannm.gruvbox_plain
+package dev.hermannm.gruvboxplain
 
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.HighlightSeverity

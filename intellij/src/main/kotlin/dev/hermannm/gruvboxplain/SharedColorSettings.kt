@@ -1,4 +1,4 @@
-package dev.hermannm.gruvbox_plain
+package dev.hermannm.gruvboxplain
 
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.openapi.options.colors.AttributesDescriptor

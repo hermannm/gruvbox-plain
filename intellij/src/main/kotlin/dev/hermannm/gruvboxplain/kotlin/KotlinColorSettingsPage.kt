@@ -1,4 +1,4 @@
-package dev.hermannm.gruvbox_plain.csharp
+package dev.hermannm.gruvboxplain.kotlin
 
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.openapi.fileTypes.PlainSyntaxHighlighter
@@ -6,15 +6,15 @@ import com.intellij.openapi.fileTypes.SyntaxHighlighter
 import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.openapi.options.colors.ColorSettingsPage
-import dev.hermannm.gruvbox_plain.SharedColorSettings
+import dev.hermannm.gruvboxplain.SharedColorSettings
 import javax.swing.Icon
 
-class CsharpColorSettingsPage : ColorSettingsPage {
-    override fun getDisplayName(): String = "C# (gruvbox-plain)"
+class KotlinColorSettingsPage : ColorSettingsPage {
+    override fun getDisplayName(): String = "Kotlin (gruvbox-plain)"
 
     override fun getDemoText(): String {
         return """
-            <type>bool</type> isDemo <keyword>=</keyword> <value>true</value><punctuation>;</punctuation>
+            <keyword>val</keyword> isDemo<punctuation>:</punctuation> <type>Boolean</type> = <value>true</value>
         """.trimIndent()
     }
 

@@ -1,14 +1,14 @@
-package dev.hermannm.gruvbox_plain.java
+package dev.hermannm.gruvboxplain.java
 
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.Annotator
 import com.intellij.psi.PsiElement
-import dev.hermannm.gruvbox_plain.highlight
-import dev.hermannm.gruvbox_plain.isGenericBracket
-import dev.hermannm.gruvbox_plain.keywordHighlighting
-import dev.hermannm.gruvbox_plain.punctuationHighlighting
-import dev.hermannm.gruvbox_plain.typeHighlighting
-import dev.hermannm.gruvbox_plain.valueHighlighting
+import dev.hermannm.gruvboxplain.highlight
+import dev.hermannm.gruvboxplain.isGenericBracket
+import dev.hermannm.gruvboxplain.keywordHighlighting
+import dev.hermannm.gruvboxplain.punctuationHighlighting
+import dev.hermannm.gruvboxplain.typeHighlighting
+import dev.hermannm.gruvboxplain.valueHighlighting
 
 class JavaAnnotator : Annotator {
     override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {

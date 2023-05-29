@@ -1,4 +1,4 @@
-rootProject.name = "gruvbox-plain"
+rootProject.name = "gruvboxplain"
 
 pluginManagement {
     repositories {

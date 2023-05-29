@@ -1,24 +1,24 @@
-package dev.hermannm.gruvbox_plain.kotlin
+package dev.hermannm.gruvboxplain.java
 
+import com.intellij.ide.highlighter.JavaFileHighlighter
 import com.intellij.openapi.editor.colors.TextAttributesKey
-import com.intellij.openapi.fileTypes.PlainSyntaxHighlighter
 import com.intellij.openapi.fileTypes.SyntaxHighlighter
 import com.intellij.openapi.options.colors.AttributesDescriptor
 import com.intellij.openapi.options.colors.ColorDescriptor
 import com.intellij.openapi.options.colors.ColorSettingsPage
-import dev.hermannm.gruvbox_plain.SharedColorSettings
+import dev.hermannm.gruvboxplain.SharedColorSettings
 import javax.swing.Icon
 
-class KotlinColorSettingsPage : ColorSettingsPage {
-    override fun getDisplayName(): String = "Kotlin (gruvbox-plain)"
+class JavaColorSettingsPage : ColorSettingsPage {
+    override fun getDisplayName(): String = "Java (gruvbox-plain)"
 
     override fun getDemoText(): String {
         return """
-            <keyword>val</keyword> isDemo<punctuation>:</punctuation> <type>Boolean</type> = <value>true</value>
+            <type>boolean</type> isDemo <keyword>=</keyword> <value>true</value><punctuation>;</punctuation>
         """.trimIndent()
     }
 
-    override fun getHighlighter(): SyntaxHighlighter = PlainSyntaxHighlighter()
+    override fun getHighlighter(): SyntaxHighlighter = JavaFileHighlighter()
 
     override fun getAttributeDescriptors(): Array<AttributesDescriptor> {
         return SharedColorSettings.attributeDescriptors

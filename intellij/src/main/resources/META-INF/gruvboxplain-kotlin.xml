@@ -2,11 +2,11 @@
     <extensions defaultExtensionNs="com.intellij">
         <annotator
             language="kotlin"
-            implementationClass="dev.hermannm.gruvbox_plain.kotlin.KotlinAnnotator"
+            implementationClass="dev.hermannm.gruvboxplain.kotlin.KotlinAnnotator"
             order="first"
         />
         <colorSettingsPage
-            implementation="dev.hermannm.gruvbox_plain.kotlin.KotlinColorSettingsPage"
+            implementation="dev.hermannm.gruvboxplain.kotlin.KotlinColorSettingsPage"
             order="first"
         />
     </extensions>

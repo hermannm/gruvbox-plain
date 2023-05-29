@@ -2,11 +2,11 @@
     <extensions defaultExtensionNs="com.intellij">
         <annotator
             language="C#"
-            implementationClass="dev.hermannm.gruvbox_plain.csharp.CsharpAnnotator"
+            implementationClass="dev.hermannm.gruvboxplain.csharp.CsharpAnnotator"
             order="first"
         />
         <colorSettingsPage
-            implementation="dev.hermannm.gruvbox_plain.csharp.CsharpColorSettingsPage"
+            implementation="dev.hermannm.gruvboxplain.csharp.CsharpColorSettingsPage"
             order="first"
         />
     </extensions>
