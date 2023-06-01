@@ -8,13 +8,13 @@ object SharedColorSettings {
         "keyword" to keywordHighlighting,
         "type" to typeHighlighting,
         "value" to valueHighlighting,
-        "punctuation" to punctuationHighlighting
+        "punctuation" to punctuationHighlighting,
     )
 
     val attributeDescriptors = arrayOf(
         AttributesDescriptor("Keyword", keywordHighlighting),
         AttributesDescriptor("Type", typeHighlighting),
         AttributesDescriptor("Value", valueHighlighting),
-        AttributesDescriptor("Punctuation", punctuationHighlighting)
+        AttributesDescriptor("Punctuation", punctuationHighlighting),
     )
 }

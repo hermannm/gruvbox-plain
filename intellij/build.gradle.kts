@@ -7,6 +7,19 @@ plugins {
 group = "dev.hermannm"
 version = "0.2.0"
 
+sourceSets {
+    main {
+        kotlin.setSrcDirs(listOf("src"))
+        java.setSrcDirs(listOf("src"))
+        resources.setSrcDirs(listOf("resources"))
+    }
+    test {
+        kotlin.setSrcDirs(listOf("test"))
+        java.setSrcDirs(listOf("test"))
+        resources.setSrcDirs(listOf("test/resources"))
+    }
+}
+
 repositories {
     mavenCentral()
 }

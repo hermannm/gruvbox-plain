@@ -15,7 +15,16 @@ class JavaAnnotator : Annotator {
         val highlighting = when (element.text) {
             "->" -> keywordHighlighting
             "this", "true", "false", "null" -> valueHighlighting
-            "char", "boolean", "int", "float", "double", "long", "short", "byte", "void" -> typeHighlighting
+            "char",
+            "boolean",
+            "int",
+            "float",
+            "double",
+            "long",
+            "short",
+            "byte",
+            "void"
+            -> typeHighlighting
             "::" -> punctuationHighlighting
             "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
             else -> return
