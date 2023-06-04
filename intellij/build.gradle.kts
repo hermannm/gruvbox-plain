@@ -1,7 +1,7 @@
 plugins {
     kotlin("jvm") version "1.5.10"
     id("org.jetbrains.intellij") version "1.12.0"
-    id("org.jlleitschuh.gradle.ktlint") version "11.3.2"
+    id("org.jmailen.kotlinter") version "3.15.0"
 }
 
 group = "dev.hermannm"

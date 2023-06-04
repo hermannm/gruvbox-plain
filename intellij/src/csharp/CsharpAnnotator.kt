@@ -33,7 +33,7 @@ class CsharpAnnotator : Annotator {
             "ulong",
             "short",
             "ushort",
-            "void"
+            "void",
             -> typeHighlighting
             ":" -> punctuationHighlighting
             "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return

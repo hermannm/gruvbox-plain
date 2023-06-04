@@ -23,7 +23,7 @@ class JavaAnnotator : Annotator {
             "long",
             "short",
             "byte",
-            "void"
+            "void",
             -> typeHighlighting
             "::" -> punctuationHighlighting
             "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
