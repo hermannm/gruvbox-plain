@@ -30,22 +30,15 @@ fun PsiElement.isPackagePathElement(): Boolean {
         return false
     }
 
-    var bottomElement = this
-    var middleElement = bottomElement.parent ?: return false
+    // Skips the immediate parent of the original element, as the package/import element is always
+    // at least 2 levels up.
+    var parentElement = this.parent?.parent ?: return false
 
     while (true) {
-        val topElement = middleElement.parent ?: return false
-
-        val topElementClassName = topElement.javaClass.simpleName
-
-        if (
-            (topElementClassName == "KtPackageDirective") ||
-            (topElementClassName == "KtImportDirective" && bottomElement != middleElement.lastChild)
-        ) {
-            return true
+        when (parentElement.javaClass.simpleName) {
+            "KtPackageDirective", "KtImportDirective" -> return true
         }
 
-        bottomElement = middleElement
-        middleElement = topElement
+        parentElement = parentElement.parent ?: return false
     }
 }
