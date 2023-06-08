@@ -19,6 +19,7 @@
       "name": "keywords, operators",
       "settings": { "foreground": "#fe8019" },
       "scope": [
+        "constant.other.placeholder",
         "keyword.operator",
         "keyword.type.graphql",
         "keyword",
