@@ -13,14 +13,16 @@ repositories {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version.set("IU-231.9011.34")
+    version.set("2023.1")
+    type.set("IC")
     plugins.set(listOf("com.intellij.java"))
+    updateSinceUntilBuild.set(false)
 }
 
 tasks {
     patchPluginXml {
         changeNotes.set("in development, unstable")
-        sinceBuild.set("IU-231.9011.34")
+        sinceBuild.set("231")
     }
 }
 
