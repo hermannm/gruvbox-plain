@@ -1,3 +1,4 @@
 intellij/**/.gradle
 intellij/**/.idea
 intellij/**/build
+*.vsix
