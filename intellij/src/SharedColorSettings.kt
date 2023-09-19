@@ -7,6 +7,7 @@ object SharedColorSettings {
     val additionalHighlightingTagToDescriptorMap: Map<String, TextAttributesKey> = mapOf(
         "keyword" to keywordHighlighting,
         "type" to typeHighlighting,
+        "function" to functionHighlighting,
         "value" to valueHighlighting,
         "punctuation" to punctuationHighlighting,
     )
@@ -14,6 +15,7 @@ object SharedColorSettings {
     val attributeDescriptors = arrayOf(
         AttributesDescriptor("Keyword", keywordHighlighting),
         AttributesDescriptor("Type", typeHighlighting),
+        AttributesDescriptor("Function", functionHighlighting),
         AttributesDescriptor("Value", valueHighlighting),
         AttributesDescriptor("Punctuation", punctuationHighlighting),
     )

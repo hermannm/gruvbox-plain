@@ -17,6 +17,11 @@ val typeHighlighting = TextAttributesKey.createTextAttributesKey(
     DefaultLanguageHighlighterColors.CLASS_NAME,
 )
 
+val functionHighlighting = TextAttributesKey.createTextAttributesKey(
+    "GRUVBOX_PLAIN_FUNCTION",
+    DefaultLanguageHighlighterColors.FUNCTION_CALL,
+)
+
 val valueHighlighting = TextAttributesKey.createTextAttributesKey(
     "GRUVBOX_PLAIN_VALUE",
     DefaultLanguageHighlighterColors.STRING,

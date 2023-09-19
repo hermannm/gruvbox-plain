@@ -10,6 +10,7 @@
   <depends optional="true" config-file="plugin-java.xml">com.intellij.java</depends>
   <depends optional="true" config-file="plugin-kotlin.xml">org.jetbrains.kotlin</depends>
   <depends optional="true" config-file="plugin-csharp.xml">com.intellij.modules.rider</depends>
+  <depends optional="true" config-file="plugin-cpp.xml">com.intellij.modules.clion</depends>
   <description><![CDATA[
     <p>Theme based on <a href="https://github.com/morhetz/gruvbox"><code>morhetz/gruvbox</code></a>, but with a plainer color palette for syntax highlighting. The theme comes with two palettes: <code>gruvbox-plain-cold</code> and <code>gruvbox-plain-warm</code>.</p>
     <h3>Color Scheme</h3>

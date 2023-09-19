@@ -1,0 +1,13 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator
+            language="ObjectiveC"
+            implementationClass="dev.hermannm.gruvboxplain.cpp.CppAnnotator"
+            order="first"
+        />
+        <colorSettingsPage
+            implementation="dev.hermannm.gruvboxplain.cpp.CppColorSettingsPage"
+            order="first"
+        />
+    </extensions>
+</idea-plugin>
