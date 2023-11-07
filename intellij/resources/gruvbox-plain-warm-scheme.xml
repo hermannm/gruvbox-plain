@@ -115,7 +115,7 @@
     </option>
     <option name="CONSOLE_BLACK_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="fbf1c7" />
+        <option name="FOREGROUND" value="ebdbb2" />
       </value>
     </option>
     <option name="CONSOLE_BLUE_BRIGHT_OUTPUT">
@@ -953,7 +953,7 @@
     </option>
     <option name="RUBY_HASH_ASSOC">
       <value>
-        <option name="FOREGROUND" value="fbf1c7" />
+        <option name="FOREGROUND" value="ebdbb2" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -1096,7 +1096,7 @@
     </option>
     <option name="TEXT">
       <value>
-        <option name="FOREGROUND" value="fbf1c7" />
+        <option name="FOREGROUND" value="ebdbb2" />
         <option name="BACKGROUND" value="282828" />
       </value>
     </option>
