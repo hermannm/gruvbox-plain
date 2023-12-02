@@ -1032,6 +1032,12 @@
         <option name="FOREGROUND" value="f9f5d7" />
       </value>
     </option>
+    <option name="ReSharper.CSHARP_DELEGATE_IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="b8bb26" />
+        <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
     <option name="SASS_MIXIN">
       <value>
         <option name="FOREGROUND" value="fb4934" />
