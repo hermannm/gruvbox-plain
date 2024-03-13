@@ -164,6 +164,7 @@
     "builtinAttribute": "#83a598",
     "decorator": "#83a598",
     "generic.attribute": "#83a598",
+    "selfTypeKeyword": "#83a598",
     "operatorOverloaded": "#d3869b",
     "selfKeyword": "#8ec07c",
     "variable.callable": "#b8bb26"
