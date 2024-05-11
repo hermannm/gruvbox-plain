@@ -47,6 +47,7 @@
         "entity.other.attribute-name.id.css",
         "entity.other.attribute-name.pseudo-element.css",
         "keyword.type",
+        "meta.attribute",
         "punctuation.definition.lifetime",
         "storage.modifier.lifetime",
         "storage.type.annotation",
