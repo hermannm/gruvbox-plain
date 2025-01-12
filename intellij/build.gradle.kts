@@ -25,16 +25,3 @@ tasks {
         sinceBuild.set("231")
     }
 }
-
-sourceSets {
-    main {
-        kotlin.setSrcDirs(listOf("src"))
-        java.setSrcDirs(listOf("src"))
-        resources.setSrcDirs(listOf("resources"))
-    }
-    test {
-        kotlin.setSrcDirs(listOf("test"))
-        java.setSrcDirs(listOf("test"))
-        resources.setSrcDirs(listOf("test-resources"))
-    }
-}
