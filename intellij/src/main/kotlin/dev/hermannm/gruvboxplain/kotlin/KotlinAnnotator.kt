@@ -12,9 +12,6 @@ import dev.hermannm.gruvboxplain.keywordHighlighting
 import dev.hermannm.gruvboxplain.punctuationHighlighting
 import dev.hermannm.gruvboxplain.typeHighlighting
 import dev.hermannm.gruvboxplain.valueHighlighting
-import com.intellij.openapi.diagnostic.logger
-
-private val log = logger<KotlinAnnotator>()
 
 class KotlinAnnotator : Annotator {
     override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
@@ -47,10 +44,7 @@ fun PsiElement.highlightChildIdentifiers(
 ) {
     for (childElement in this.childLeafs()) {
         if (childElement.elementType.toString() == "IDENTIFIER") {
-            log.error("Found identifier '${childElement.text}'")
             childElement.highlight(highlighting, annotationHolder)
-        } else {
-            log.error("Found non-identifier '${childElement.text}' of type '${childElement.elementType.toString()}'")
         }
     }
 }
