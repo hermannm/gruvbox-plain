@@ -3,6 +3,9 @@
   <name>gruvbox-plain</name>
   <vendor email="hermann.morkrid@gmail.com" url="https://hermannm.dev">hermannm</vendor>
   <depends>com.intellij.modules.platform</depends>
+  <extensions defaultExtensionNs="org.jetbrains.kotlin">
+    <supportsKotlinPluginMode supportsK2="true" />
+  </extensions>
   <extensions defaultExtensionNs="com.intellij">
     <themeProvider id="dev.hermannm.gruvboxplain.warm" path="/gruvbox-plain-warm.theme.json"/>
     <themeProvider id="dev.hermannm.gruvboxplain.cold" path="/gruvbox-plain-cold.theme.json"/>

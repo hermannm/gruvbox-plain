@@ -1,3 +1,5 @@
+import org.jetbrains.intellij.platform.gradle.tasks.RunIdeTask
+
 group = "dev.hermannm"
 version = "0.3.1"
 
@@ -28,6 +30,12 @@ intellijPlatform {
         ideaVersion {
             sinceBuild = "243"
         }
+    }
+}
+
+tasks.named<RunIdeTask>("runIde") {
+    jvmArgumentProviders += CommandLineArgumentProvider {
+        listOf("-Didea.kotlin.plugin.use.k2=true")
     }
 }
 
