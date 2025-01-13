@@ -1,4 +1,6 @@
 intellij/**/.gradle
 intellij/**/.idea
 intellij/**/build
+intellij/**/.kotlin
+intellij/**/.intellijPlatform
 *.vsix

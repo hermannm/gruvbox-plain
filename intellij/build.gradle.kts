@@ -1,27 +1,36 @@
-plugins {
-    kotlin("jvm") version "1.5.30"
-    id("org.jetbrains.intellij") version "1.12.0"
-    id("org.jmailen.kotlinter") version "3.15.0"
-}
-
 group = "dev.hermannm"
-version = "0.3.0"
+version = "0.3.1"
+
+plugins {
+    kotlin("jvm") version "2.1.0"
+    id("org.jetbrains.intellij.platform") version "2.1.0"
+}
 
 repositories {
     mavenCentral()
-}
 
-// See https://github.com/JetBrains/gradle-intellij-plugin/
-intellij {
-    version.set("2023.1")
-    type.set("IC")
-    plugins.set(listOf("com.intellij.java"))
-    updateSinceUntilBuild.set(false)
-}
-
-tasks {
-    patchPluginXml {
-        changeNotes.set("in development, unstable")
-        sinceBuild.set("231")
+    intellijPlatform {
+        defaultRepositories()
     }
+}
+
+dependencies {
+    intellijPlatform {
+        intellijIdeaCommunity("2024.3")
+        instrumentationTools()
+        bundledPlugin("com.intellij.java")
+    }
+}
+
+intellijPlatform {
+    pluginConfiguration {
+        name = "gruvbox-plain"
+        ideaVersion {
+            sinceBuild = "243"
+        }
+    }
+}
+
+kotlin {
+    jvmToolchain(21)
 }
