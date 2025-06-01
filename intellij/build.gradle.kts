@@ -5,7 +5,7 @@ version = "0.3.1"
 
 plugins {
     kotlin("jvm") version "2.1.0"
-    id("org.jetbrains.intellij.platform") version "2.1.0"
+    id("org.jetbrains.intellij.platform") version "2.6.0"
 }
 
 repositories {
@@ -18,8 +18,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaCommunity("2024.3")
-        instrumentationTools()
+        intellijIdeaCommunity("2025.1.1.1")
         bundledPlugin("com.intellij.java")
     }
 }
@@ -28,7 +27,7 @@ intellijPlatform {
     pluginConfiguration {
         name = "gruvbox-plain"
         ideaVersion {
-            sinceBuild = "243"
+            sinceBuild = "251"
         }
     }
 }
