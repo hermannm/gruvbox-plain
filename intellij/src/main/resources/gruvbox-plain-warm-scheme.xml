@@ -2,14 +2,14 @@
   <option name="FONT_SCALE" value="1.0" />
   <option name="LINE_SPACING" value="1.2" />
   <option name="EDITOR_FONT_SIZE" value="14" />
-  <option name="EDITOR_FONT_NAME" value="Consolas" />
+  <option name="EDITOR_FONT_NAME" value="hermannm-consolas" />
   <colors>
     <option name="ADDED_LINES_COLOR" value="79740e" />
     <option name="ANNOTATIONS_COLOR" value="928374" />
     <option name="CARET_ROW_COLOR" value="3c3836" />
     <option name="CONSOLE_BACKGROUND_KEY" value="282828" />
     <option name="DOCUMENTATION_COLOR" value="32302f" />
-    <option name="DOC_COMMENT_LINK" value="b8bb26" />
+    <option name="DOC_COMMENT_LINK" value="fabd2f" />
     <option name="FOLDED_TEXT_BORDER_COLOR" value="665c54" />
     <option name="GUTTER_BACKGROUND" value="282828" />
     <option name="INDENT_GUIDE" value="665c54" />
@@ -379,17 +379,17 @@
     </option>
     <option name="DEFAULT_DOC_COMMENT_TAG">
       <value>
-        <option name="FOREGROUND" value="928374" />
+        <option name="FOREGROUND" value="fe8019" />
       </value>
     </option>
     <option name="DEFAULT_DOC_COMMENT_TAG_VALUE">
       <value>
-        <option name="FOREGROUND" value="928374" />
+        <option name="FOREGROUND" value="ebdbb2" />
       </value>
     </option>
     <option name="DEFAULT_DOC_MARKUP">
       <value>
-        <option name="FOREGROUND" value="928374" />
+        <option name="FOREGROUND" value="fabd2f" />
       </value>
     </option>
     <option name="DEFAULT_DOT">
@@ -700,6 +700,11 @@
       <value>
         <option name="FOREGROUND" value="a89984" />
         <option name="BACKGROUND" value="7c6f64" />
+      </value>
+    </option>
+    <option name="JS.DOC_TYPE">
+      <value>
+        <option name="FOREGROUND" value="fabd2f" />
       </value>
     </option>
     <option name="JS.GLOBAL_FUNCTION" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
@@ -1123,6 +1128,14 @@
       <value>
         <option name="FOREGROUND" value="fabd2f" />
       </value>
+    </option>
+    <option name="TS.PRIMITIVE.TYPES">
+      <value>
+        <option name="FOREGROUND" value="fabd2f" />
+      </value>
+    </option>
+    <option name="TS.TYPE_GUARD">
+      <value />
     </option>
     <option name="TS.TYPE_PARAMETER">
       <value>

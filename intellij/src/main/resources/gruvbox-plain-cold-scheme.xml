@@ -2,7 +2,7 @@
   <option name="FONT_SCALE" value="1.0" />
   <option name="LINE_SPACING" value="1.2" />
   <option name="EDITOR_FONT_SIZE" value="14" />
-  <option name="EDITOR_FONT_NAME" value="Consolas" />
+  <option name="EDITOR_FONT_NAME" value="hermannm-consolas" />
   <colors>
     <option name="ADDED_LINES_COLOR" value="b8bb26" />
     <option name="ANNOTATIONS_COLOR" value="928374" />
@@ -11,7 +11,7 @@
     <option name="CONSOLE_BACKGROUND_KEY" value="282828" />
     <option name="DELETED_LINES_COLOR" value="fb4934" />
     <option name="DOCUMENTATION_COLOR" value="32302f" />
-    <option name="DOC_COMMENT_LINK" value="b8bb26" />
+    <option name="DOC_COMMENT_LINK" value="83a598" />
     <option name="FILESTATUS_ADDED" value="98971a" />
     <option name="FILESTATUS_COPIED" value="98971a" />
     <option name="FILESTATUS_DELETED" value="cc241d" />
@@ -738,11 +738,21 @@
         <option name="BACKGROUND" value="7c6f64" />
       </value>
     </option>
+    <option name="JS.DOC_TYPE">
+      <value>
+        <option name="FOREGROUND" value="83a598" />
+      </value>
+    </option>
+    <option name="JS.GLOBAL_FUNCTION" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
+    <option name="JS.GLOBAL_VARIABLE" baseAttributes="DEFAULT_GLOBAL_VARIABLE" />
+    <option name="JS.INSTANCE_MEMBER_FUNCTION" baseAttributes="DEFAULT_INSTANCE_METHOD" />
+    <option name="JS.LOCAL_VARIABLE" baseAttributes="DEFAULT_LOCAL_VARIABLE" />
     <option name="JS.PRIMITIVE.TYPE">
       <value>
         <option name="FOREGROUND" value="83a598" />
       </value>
     </option>
+    <option name="JS.REGEXP" baseAttributes="DEFAULT_STRING" />
     <option name="KOTLIN_ARROW">
       <value>
         <option name="FOREGROUND" value="d3869b" />
@@ -1149,7 +1159,7 @@
     </option>
     <option name="TEXT">
       <value>
-        <option name="FOREGROUND" value="ebdbb2" />
+        <option name="FOREGROUND" value="fbf1c7" />
         <option name="BACKGROUND" value="282828" />
       </value>
     </option>
@@ -1166,10 +1176,23 @@
         <option name="ERROR_STRIPE_COLOR" value="fb4934" />
       </value>
     </option>
+    <option name="TS.DOC_TYPE">
+      <value>
+        <option name="FOREGROUND" value="83a598" />
+      </value>
+    </option>
     <option name="TS.MODULE_NAME">
       <value>
         <option name="FOREGROUND" value="83a598" />
       </value>
+    </option>
+    <option name="TS.PRIMITIVE.TYPES">
+      <value>
+        <option name="FOREGROUND" value="83a598" />
+      </value>
+    </option>
+    <option name="TS.TYPE_GUARD">
+      <value />
     </option>
     <option name="TS.TYPE_PARAMETER">
       <value>
