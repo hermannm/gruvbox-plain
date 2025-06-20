@@ -1,13 +1,13 @@
 <idea-plugin>
-    <extensions defaultExtensionNs="com.intellij">
-        <annotator
-            language="C#"
-            implementationClass="dev.hermannm.gruvboxplain.csharp.CsharpAnnotator"
-            order="first"
-        />
-        <colorSettingsPage
-            implementation="dev.hermannm.gruvboxplain.csharp.CsharpColorSettingsPage"
-            order="first"
-        />
-    </extensions>
+  <extensions defaultExtensionNs="com.intellij">
+    <annotator
+      language="C#"
+      implementationClass="dev.hermannm.gruvboxplain.csharp.CsharpAnnotator"
+      order="first"
+    />
+    <colorSettingsPage
+      implementation="dev.hermannm.gruvboxplain.csharp.CsharpColorSettingsPage"
+      order="first"
+    />
+  </extensions>
 </idea-plugin>
