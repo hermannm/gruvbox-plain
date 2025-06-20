@@ -1199,7 +1199,12 @@
         <option name="FOREGROUND" value="fabd2f" />
       </value>
     </option>
-    <option name="XML_PROLOGUE" baseAttributes="TEXT" />
+    <option name="XML_PROLOGUE">
+      <value>
+        <option name="FOREGROUND" value="a89984" />
+        <option name="BACKGROUND" value="282828" />
+      </value>
+    </option>
     <option name="XML_TAG">
       <value>
         <option name="FOREGROUND" value="a89984" />

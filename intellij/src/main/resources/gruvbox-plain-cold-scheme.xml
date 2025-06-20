@@ -1159,7 +1159,7 @@
     </option>
     <option name="TEXT">
       <value>
-        <option name="FOREGROUND" value="fbf1c7" />
+        <option name="FOREGROUND" value="ebdbb2" />
         <option name="BACKGROUND" value="282828" />
       </value>
     </option>
@@ -1294,7 +1294,12 @@
         <option name="FOREGROUND" value="83a598" />
       </value>
     </option>
-    <option name="XML_PROLOGUE" baseAttributes="TEXT" />
+    <option name="XML_PROLOGUE">
+      <value>
+        <option name="FOREGROUND" value="a89984" />
+        <option name="BACKGROUND" value="282828" />
+      </value>
+    </option>
     <option name="XML_TAG">
       <value>
         <option name="FOREGROUND" value="a89984" />
