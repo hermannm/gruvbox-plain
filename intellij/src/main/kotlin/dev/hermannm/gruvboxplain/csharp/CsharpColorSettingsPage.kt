@@ -1,3 +1,5 @@
+@file:Suppress("DialogTitleCapitalization")
+
 package dev.hermannm.gruvboxplain.csharp
 
 import com.intellij.openapi.editor.colors.TextAttributesKey

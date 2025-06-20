@@ -1,3 +1,5 @@
+@file:Suppress("DialogTitleCapitalization")
+
 package dev.hermannm.gruvboxplain.java
 
 import com.intellij.ide.highlighter.JavaFileHighlighter
