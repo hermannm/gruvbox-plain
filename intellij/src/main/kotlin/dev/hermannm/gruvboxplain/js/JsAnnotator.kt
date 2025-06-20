@@ -2,22 +2,43 @@ package dev.hermannm.gruvboxplain.js
 
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.Annotator
+import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiWhiteSpace
-import dev.hermannm.gruvboxplain.highlight
-import dev.hermannm.gruvboxplain.isGenericBracket
-import dev.hermannm.gruvboxplain.punctuationHighlighting
+import com.intellij.psi.util.nextLeaf
+import com.intellij.psi.util.prevLeaf
+import dev.hermannm.gruvboxplain.*
 
 class JsAnnotator : Annotator {
     override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
-        val highlighting = when (element.text) {
-            ":" -> if (!element.isTernaryColon()) punctuationHighlighting else return
-            "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
-            else -> return
-        }
+        val highlighting: TextAttributesKey =
+            if (element.name() == "JS:IDENTIFIER" && element.nextLeaf()?.text == "(") {
+                // Some function/constructor calls are not highlighted correctly, e.g. when a
+                // function is returned from another function. So we do custom highlighting for
+                // function calls here.
+                if (element.previousNonWhitespaceLeaf()?.name() == "JS:NEW_KEYWORD") {
+                    // We want calls to class constructors to use type highlighting
+                    typeHighlighting
+                } else {
+                    // Other function calls should use normal function highlighting
+                    functionHighlighting
+                }
+            } else {
+                when (element.text) {
+                    "..." -> keywordHighlighting
+                    ":" -> if (!element.isTernaryColon()) punctuationHighlighting else return
+                    "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
+                    else -> return
+                }
+            }
 
         element.highlight(highlighting, annotationHolder)
     }
+}
+
+private fun PsiElement.previousNonWhitespaceLeaf(): PsiElement? {
+    this.prevLeaf()
+    return this.prevLeaf(filter = { it !is PsiWhiteSpace })
 }
 
 /**
