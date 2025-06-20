@@ -6,16 +6,11 @@ import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
 import com.intellij.psi.util.childLeafs
 import com.intellij.psi.util.elementType
-import dev.hermannm.gruvboxplain.highlight
-import dev.hermannm.gruvboxplain.isGenericBracket
-import dev.hermannm.gruvboxplain.keywordHighlighting
-import dev.hermannm.gruvboxplain.punctuationHighlighting
-import dev.hermannm.gruvboxplain.typeHighlighting
-import dev.hermannm.gruvboxplain.valueHighlighting
+import dev.hermannm.gruvboxplain.*
 
 class KotlinAnnotator : Annotator {
     override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
-        when (element.elementType.toString()) {
+        when (element.name()) {
             // If element is a package/import declaration, we highlight package path elements
             "PACKAGE_DIRECTIVE",
             "IMPORT_LIST" -> {
