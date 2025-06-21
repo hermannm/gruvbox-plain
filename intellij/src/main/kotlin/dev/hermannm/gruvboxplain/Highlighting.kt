@@ -3,7 +3,6 @@ package dev.hermannm.gruvboxplain
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
-import com.intellij.psi.PsiWhiteSpace
 
 /**
  * Parameter passed to [BaseAnnotator].
@@ -34,7 +33,7 @@ class HighlightingGroup(
         HighlightingGroup(
             Highlighting.PUNCTUATION,
             symbols = arrayOf("<", ">"),
-            applyIf = { element -> element.prevSibling !is PsiWhiteSpace },
+            applyIf = { element -> !element.prevSibling.textMatches(" ") },
         )
   }
 }

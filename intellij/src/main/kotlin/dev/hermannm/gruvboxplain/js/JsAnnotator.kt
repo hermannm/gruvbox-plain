@@ -2,7 +2,6 @@ package dev.hermannm.gruvboxplain.js
 
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.psi.PsiElement
-import com.intellij.psi.PsiWhiteSpace
 import com.intellij.psi.util.nextLeaf
 import dev.hermannm.gruvboxplain.BaseAnnotator
 import dev.hermannm.gruvboxplain.Highlighting
@@ -10,7 +9,7 @@ import dev.hermannm.gruvboxplain.HighlightingConfig
 import dev.hermannm.gruvboxplain.HighlightingGroup
 import dev.hermannm.gruvboxplain.applyHighlighting
 import dev.hermannm.gruvboxplain.name
-import dev.hermannm.gruvboxplain.previousNonWhitespaceLeaf
+import dev.hermannm.gruvboxplain.previousNonSpaceLeaf
 
 class JsAnnotator : BaseAnnotator(CONFIG) {
   companion object {
@@ -27,7 +26,7 @@ class JsAnnotator : BaseAnnotator(CONFIG) {
                 // or TypeScript types, but keep keyword highlighting when used in a ternary
                 // statement. In a ternary, the colon will be preceded by a space, so we can use
                 // that to differentiate the two.
-                applyIf = { element -> element.prevSibling !is PsiWhiteSpace },
+                applyIf = { element -> !element.prevSibling.textMatches(" ") },
             ),
             HighlightingGroup.GENERIC_BRACKETS,
         )
@@ -40,7 +39,7 @@ class JsAnnotator : BaseAnnotator(CONFIG) {
     // Function highlighting depending on whether it's a constructor or not.
     if (element.name() == "JS:IDENTIFIER" && element.nextLeaf()?.textMatches("(") == true) {
       val highlighting =
-          if (element.previousNonWhitespaceLeaf()?.name() == "JS:NEW_KEYWORD") {
+          if (element.previousNonSpaceLeaf()?.name() == "JS:NEW_KEYWORD") {
             // We want calls to class constructors to use type highlighting
             Highlighting.TYPE
           } else {
