@@ -1,42 +1,49 @@
 package dev.hermannm.gruvboxplain.cpp
 
-import com.intellij.lang.annotation.AnnotationHolder
-import com.intellij.lang.annotation.Annotator
-import com.intellij.psi.PsiElement
-import com.intellij.psi.util.elementType
-import dev.hermannm.gruvboxplain.functionHighlighting
-import dev.hermannm.gruvboxplain.highlight
-import dev.hermannm.gruvboxplain.isGenericBracket
-import dev.hermannm.gruvboxplain.punctuationHighlighting
-import dev.hermannm.gruvboxplain.typeHighlighting
-import dev.hermannm.gruvboxplain.valueHighlighting
+import dev.hermannm.gruvboxplain.BaseAnnotator
+import dev.hermannm.gruvboxplain.Highlighting
+import dev.hermannm.gruvboxplain.HighlightingGroup
+import dev.hermannm.gruvboxplain.name
 
-class CppAnnotator : Annotator {
-    override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
-        val highlighting = when (element.text) {
-            "this", "true", "false", "nullptr" -> valueHighlighting
-            "int",
-            "char",
-            "bool",
-            "float",
-            "double",
-            "void",
-            "long",
-            "short",
-            "signed",
-            "unsigned",
-            -> typeHighlighting
-            "sizeof" -> functionHighlighting
-            ":", "::", "->" -> punctuationHighlighting
-            "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
-            else -> if (element.isAttribute()) typeHighlighting else return
-        }
-
-        element.highlight(highlighting, annotationHolder)
-    }
-}
-
-fun PsiElement.isAttribute(): Boolean {
-    return this.elementType?.toString() == "IDENTIFIER" &&
-        this.parent?.javaClass?.simpleName == "OCAttributeImpl"
-}
+class CppAnnotator :
+    BaseAnnotator(
+        highlightingGroups =
+            arrayOf(
+                HighlightingGroup(
+                    Highlighting.VALUE,
+                    symbols = arrayOf("this", "true", "false", "nullptr"),
+                ),
+                HighlightingGroup(
+                    Highlighting.TYPE,
+                    symbols =
+                        arrayOf(
+                            "int",
+                            "char",
+                            "bool",
+                            "float",
+                            "double",
+                            "void",
+                            "long",
+                            "short",
+                            "signed",
+                            "unsigned",
+                        ),
+                ),
+                HighlightingGroup(
+                    Highlighting.FUNCTION,
+                    symbols = arrayOf("sizeof"),
+                ),
+                HighlightingGroup(
+                    Highlighting.FUNCTION,
+                    symbols = arrayOf(":", "::", "->"),
+                ),
+                HighlightingGroup.GENERIC_BRACKETS,
+                HighlightingGroup(
+                    Highlighting.PUNCTUATION,
+                    applyIf = { element ->
+                      element.name() == "IDENTIFIER" &&
+                          element.parent?.javaClass?.simpleName == "OCAttributeImpl"
+                    },
+                ),
+            ),
+    )

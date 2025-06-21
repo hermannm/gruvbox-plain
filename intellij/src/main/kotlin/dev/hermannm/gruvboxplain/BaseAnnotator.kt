@@ -1,0 +1,36 @@
+package dev.hermannm.gruvboxplain
+
+import com.intellij.lang.annotation.AnnotationHolder
+import com.intellij.lang.annotation.Annotator
+import com.intellij.lang.annotation.HighlightSeverity
+import com.intellij.psi.PsiElement
+
+open class BaseAnnotator(
+    private val highlightingGroups: Array<HighlightingGroup>,
+) : Annotator {
+  override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
+    for (group in highlightingGroups) {
+      if (group.symbols != null && group.symbols.none { element.textMatches(it) }) {
+        continue
+      }
+
+      if (group.applyIf != null && !group.applyIf(element)) {
+        continue
+      }
+
+      applyHighlighting(group.highlighting, element, annotationHolder)
+    }
+  }
+}
+
+fun applyHighlighting(
+    highlighting: Highlighting,
+    element: PsiElement,
+    annotationHolder: AnnotationHolder
+) {
+  annotationHolder
+      .newSilentAnnotation(HighlightSeverity.INFORMATION)
+      .range(element)
+      .textAttributes(highlighting.textAttributesKey)
+      .create()
+}

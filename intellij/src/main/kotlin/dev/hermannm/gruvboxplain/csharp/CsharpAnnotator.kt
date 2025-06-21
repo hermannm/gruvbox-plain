@@ -1,45 +1,50 @@
 package dev.hermannm.gruvboxplain.csharp
 
-import com.intellij.lang.annotation.AnnotationHolder
-import com.intellij.lang.annotation.Annotator
-import com.intellij.psi.PsiElement
-import dev.hermannm.gruvboxplain.highlight
-import dev.hermannm.gruvboxplain.isGenericBracket
-import dev.hermannm.gruvboxplain.keywordHighlighting
-import dev.hermannm.gruvboxplain.punctuationHighlighting
-import dev.hermannm.gruvboxplain.typeHighlighting
-import dev.hermannm.gruvboxplain.valueHighlighting
+import dev.hermannm.gruvboxplain.BaseAnnotator
+import dev.hermannm.gruvboxplain.Highlighting
+import dev.hermannm.gruvboxplain.HighlightingGroup
 
-class CsharpAnnotator : Annotator {
-    override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
-        val highlighting = when (element.text) {
-            "=>", "?", "??", "??=", "!" -> keywordHighlighting
-            "this", "true", "false", "null" -> valueHighlighting
-            "object",
-            "string",
-            "dynamic",
-            "bool",
-            "byte",
-            "sbyte",
-            "char",
-            "decimal",
-            "double",
-            "float",
-            "int",
-            "uint",
-            "nint",
-            "nuint",
-            "long",
-            "ulong",
-            "short",
-            "ushort",
-            "void",
-            -> typeHighlighting
-            ":" -> punctuationHighlighting
-            "<", ">" -> if (element.isGenericBracket()) punctuationHighlighting else return
-            else -> return
-        }
-
-        element.highlight(highlighting, annotationHolder)
-    }
-}
+class CsharpAnnotator :
+    BaseAnnotator(
+        highlightingGroups =
+            arrayOf(
+                HighlightingGroup(
+                    Highlighting.KEYWORD,
+                    symbols = arrayOf("=>", "?", "??", "??=", "!"),
+                ),
+                HighlightingGroup(
+                    Highlighting.VALUE,
+                    symbols = arrayOf("this", "true", "false", "null"),
+                ),
+                HighlightingGroup(
+                    Highlighting.TYPE,
+                    symbols =
+                        arrayOf(
+                            "object",
+                            "string",
+                            "dynamic",
+                            "bool",
+                            "byte",
+                            "sbyte",
+                            "char",
+                            "decimal",
+                            "double",
+                            "float",
+                            "int",
+                            "uint",
+                            "nint",
+                            "nuint",
+                            "long",
+                            "ulong",
+                            "short",
+                            "ushort",
+                            "void",
+                        ),
+                ),
+                HighlightingGroup(
+                    Highlighting.PUNCTUATION,
+                    symbols = arrayOf(":"),
+                ),
+                HighlightingGroup.GENERIC_BRACKETS,
+            ),
+    )

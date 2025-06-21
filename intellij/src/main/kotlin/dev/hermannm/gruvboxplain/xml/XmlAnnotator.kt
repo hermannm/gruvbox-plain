@@ -1,18 +1,16 @@
 package dev.hermannm.gruvboxplain.xml
 
-import com.intellij.lang.annotation.AnnotationHolder
-import com.intellij.lang.annotation.Annotator
-import com.intellij.psi.PsiElement
-import dev.hermannm.gruvboxplain.highlight
-import dev.hermannm.gruvboxplain.keywordHighlighting
+import dev.hermannm.gruvboxplain.BaseAnnotator
+import dev.hermannm.gruvboxplain.Highlighting
+import dev.hermannm.gruvboxplain.HighlightingGroup
 
-class XmlAnnotator : Annotator {
-    override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
-        val highlighting = when (element.text) {
-            "=" -> keywordHighlighting
-            else -> return
-        }
-
-        element.highlight(highlighting, annotationHolder)
-    }
-}
+class XmlAnnotator :
+    BaseAnnotator(
+        highlightingGroups =
+            arrayOf(
+                HighlightingGroup(
+                    Highlighting.KEYWORD,
+                    symbols = arrayOf("="),
+                ),
+            ),
+    )
