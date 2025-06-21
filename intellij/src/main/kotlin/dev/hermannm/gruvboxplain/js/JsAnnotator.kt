@@ -33,24 +33,35 @@ class JsAnnotator : BaseAnnotator(CONFIG) {
   }
 
   override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
-    // Some function/constructor calls are not highlighted correctly, e.g. when a function is
-    // returned from another function. So we do custom highlighting for function calls here.
-    // We don't want to put this in a `HighlightingGroup`, since we want to choose either Type or
-    // Function highlighting depending on whether it's a constructor or not.
-    if (element.name() == "JS:IDENTIFIER" && element.nextLeaf()?.textMatches("(") == true) {
-      val highlighting =
-          if (element.previousNonSpaceLeaf()?.name() == "JS:NEW_KEYWORD") {
-            // We want calls to class constructors to use type highlighting
-            Highlighting.TYPE
-          } else {
-            // Other function calls should use normal function highlighting
-            Highlighting.FUNCTION
-          }
-
-      applyHighlighting(highlighting, element, annotationHolder)
-      return
+    when (element.name()) {
+      // Some function/constructor calls are not highlighted correctly, e.g. when a function is
+      // returned from another function. So we do custom highlighting for function calls here.
+      // We don't want to put this in a `HighlightingGroup`, since we want to choose either Type or
+      // Function highlighting depending on whether it's a constructor or not.
+      "JS:IDENTIFIER" if isFunctionCall(element) -> {
+        highlightFunctionCall(element, annotationHolder)
+      }
+      else -> {
+        super.annotate(element, annotationHolder)
+      }
     }
-
-    super.annotate(element, annotationHolder)
   }
+}
+
+private fun isFunctionCall(element: PsiElement): Boolean {
+  val nextElement = element.nextLeaf()
+  return nextElement != null && nextElement.textMatches("(")
+}
+
+private fun highlightFunctionCall(element: PsiElement, annotationHolder: AnnotationHolder) {
+  val highlighting =
+      if (element.previousNonSpaceLeaf()?.name() == "JS:NEW_KEYWORD") {
+        // We want to use type highlighting for class constructors
+        Highlighting.TYPE
+      } else {
+        // Other function calls should use normal function highlighting
+        Highlighting.FUNCTION
+      }
+
+  applyHighlighting(highlighting, element, annotationHolder)
 }
