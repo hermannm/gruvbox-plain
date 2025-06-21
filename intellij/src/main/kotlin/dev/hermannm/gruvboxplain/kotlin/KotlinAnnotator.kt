@@ -5,29 +5,31 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.util.childLeafs
 import dev.hermannm.gruvboxplain.BaseAnnotator
 import dev.hermannm.gruvboxplain.Highlighting
+import dev.hermannm.gruvboxplain.HighlightingConfig
 import dev.hermannm.gruvboxplain.HighlightingGroup
 import dev.hermannm.gruvboxplain.applyHighlighting
 import dev.hermannm.gruvboxplain.name
 
-class KotlinAnnotator :
-    BaseAnnotator(
-        highlightingGroups =
-            arrayOf(
-                HighlightingGroup(
-                    Highlighting.KEYWORD,
-                    symbols = arrayOf("?:", "="),
-                ),
-                HighlightingGroup(
-                    Highlighting.VALUE,
-                    symbols = arrayOf("this", "true", "false", "null"),
-                ),
-                HighlightingGroup(
-                    Highlighting.TYPE,
-                    symbols = arrayOf("@"),
-                ),
-                HighlightingGroup.GENERIC_BRACKETS,
+class KotlinAnnotator : BaseAnnotator(CONFIG) {
+  companion object {
+    private val CONFIG: HighlightingConfig =
+        arrayOf(
+            HighlightingGroup(
+                Highlighting.KEYWORD,
+                symbols = arrayOf("?:", "="),
             ),
-    ) {
+            HighlightingGroup(
+                Highlighting.VALUE,
+                symbols = arrayOf("this", "true", "false", "null"),
+            ),
+            HighlightingGroup(
+                Highlighting.TYPE,
+                symbols = arrayOf("@"),
+            ),
+            HighlightingGroup.GENERIC_BRACKETS,
+        )
+  }
+
   override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
     when (element.name()) {
       // If element is a package/import declaration, we highlight package path elements

@@ -6,19 +6,14 @@ import com.intellij.lang.annotation.HighlightSeverity
 import com.intellij.psi.PsiElement
 
 open class BaseAnnotator(
-    private val highlightingGroups: Array<HighlightingGroup>,
+    private val highlightingConfig: HighlightingConfig,
 ) : Annotator {
   override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
-    for (group in highlightingGroups) {
-      if (group.symbols != null && group.symbols.none { element.textMatches(it) }) {
-        continue
+    for (group in highlightingConfig) {
+      if ((group.symbols == null || group.symbols.any { element.textMatches(it) }) &&
+          (group.applyIf == null || group.applyIf(element))) {
+        applyHighlighting(group.highlighting, element, annotationHolder)
       }
-
-      if (group.applyIf != null && !group.applyIf(element)) {
-        continue
-      }
-
-      applyHighlighting(group.highlighting, element, annotationHolder)
     }
   }
 }

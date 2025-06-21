@@ -6,6 +6,17 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiWhiteSpace
 
 /**
+ * Parameter passed to [BaseAnnotator].
+ *
+ * Annotators may be instantiated multiple times:
+ * https://intellij-support.jetbrains.com/hc/en-us/community/posts/20963089597586-Can-t-figure-out-why-I-have-two-instances-of-annotator
+ *
+ * So to avoid re-allocating this array, you should define it as a static field on the annotator's
+ * companion object.
+ */
+typealias HighlightingConfig = Array<HighlightingGroup>
+
+/**
  * Will apply [highlighting] to elements with text matching one of [symbols] and where [applyIf]
  * returns true. If [applyIf] is `null`, only [symbols] is checked, and vice-versa.
  *
