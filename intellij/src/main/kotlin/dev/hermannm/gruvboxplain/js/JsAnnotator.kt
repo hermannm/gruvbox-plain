@@ -26,7 +26,7 @@ class JsAnnotator : BaseAnnotator(CONFIG) {
                 // or TypeScript types, but keep keyword highlighting when used in a ternary
                 // statement. In a ternary, the colon will be preceded by a space, so we can use
                 // that to differentiate the two.
-                applyIf = { element -> !element.prevSibling.textMatches(" ") },
+                applyIf = { element -> element.prevSibling?.textMatches(" ") == false },
             ),
             HighlightingGroup.GENERIC_BRACKETS,
         )

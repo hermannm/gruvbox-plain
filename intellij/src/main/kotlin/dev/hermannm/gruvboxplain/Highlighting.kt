@@ -33,7 +33,10 @@ class HighlightingGroup(
         HighlightingGroup(
             Highlighting.PUNCTUATION,
             symbols = arrayOf("<", ">"),
-            applyIf = { element -> !element.prevSibling.textMatches(" ") },
+            // We don't want to match less than/greater than operators (as we still want those to
+            // use keyword highlighting). These will typically be preceded by a space, so we use
+            // that to selectively apply this highlighting.
+            applyIf = { element -> element.prevSibling?.textMatches(" ") == false },
         )
   }
 }
