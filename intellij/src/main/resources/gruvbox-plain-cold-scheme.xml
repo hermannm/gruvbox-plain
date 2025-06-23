@@ -4,7 +4,7 @@
   <option name="EDITOR_FONT_SIZE" value="14"/>
   <option name="EDITOR_FONT_NAME" value="hermannm-consolas"/>
   <colors>
-    <option name="ADDED_LINES_COLOR" value="b8bb26"/>
+    <option name="ADDED_LINES_COLOR" value="98971a"/>
     <option name="ANNOTATIONS_COLOR" value="928374"/>
     <option name="CARET_COLOR" value="ebdbb2"/>
     <option name="CARET_ROW_COLOR" value="302e2e"/>
@@ -34,8 +34,8 @@
     <option name="FILESTATUS_modifiedOutside" value="d79921"/>
     <option name="FOLDED_TEXT_BORDER_COLOR" value="665c54"/>
     <option name="GUTTER_BACKGROUND" value="282828"/>
-    <option name="IGNORED_ADDED_LINES_BORDER_COLOR" value="b8bb26"/>
-    <option name="IGNORED_DELETED_LINES_BORDER_COLOR" value="cc241d"/>
+    <option name="IGNORED_ADDED_LINES_BORDER_COLOR" value="98971a"/>
+    <option name="IGNORED_DELETED_LINES_BORDER_COLOR" value="fb4934"/>
     <option name="IGNORED_MODIFIED_LINES_BORDER_COLOR" value="83a598"/>
     <option name="INDENT_GUIDE" value="3c3836"/>
     <option name="LINE_NUMBERS_COLOR" value="665c54"/>
@@ -73,7 +73,7 @@
     <option name="ScrollBar.thumbColor" value="50494588"/>
     <option name="ScrollBar.trackColor" value=""/>
     <option name="TEARLINE_COLOR" value="665c54"/>
-    <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="b8bb26"/>
+    <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="98971a"/>
   </colors>
   <attributes>
     <option name="ABSTRACT_CLASS_NAME_ATTRIBUTES">
