@@ -50,7 +50,10 @@ class JsAnnotator : BaseAnnotator(CONFIG) {
 
 private fun isFunctionCall(element: PsiElement): Boolean {
   val nextElement = element.nextLeaf()
-  return nextElement != null && nextElement.textMatches("(")
+  return nextElement != null &&
+      nextElement.textMatches("(") &&
+      // Constructors look like functions, but we don't want to highlight them as functions
+      !element.textMatches("constructor")
 }
 
 private fun highlightFunctionCall(element: PsiElement, annotationHolder: AnnotationHolder) {
