@@ -5,7 +5,7 @@ group = "dev.hermannm"
 version = "0.3.1"
 
 plugins {
-  kotlin("jvm") version "2.1.0"
+  kotlin("jvm") version "2.2.0"
   id("org.jetbrains.intellij.platform") version "2.6.0"
 }
 
@@ -33,10 +33,4 @@ tasks.named<RunIdeTask>("runIde") {
   jvmArgumentProviders += CommandLineArgumentProvider { listOf("-Didea.kotlin.plugin.use.k2=true") }
 }
 
-kotlin {
-  jvmToolchain(21)
-  compilerOptions {
-    // Use experimental "when guards" feature
-    freeCompilerArgs.set(listOf("-Xwhen-guards"))
-  }
-}
+kotlin { jvmToolchain(21) }
