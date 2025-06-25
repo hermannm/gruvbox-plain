@@ -49,13 +49,13 @@
       "infoForeground": "fg",
       "lightSelectionBackground": "bg1",
       "selectionBackground": "bg2",
-      "selectionForeground": "fg0",
-      "selectionBackgroundInactive": "bg_s",
-      "selectionInactiveBackground": "bg_s",
+      "selectionForeground": "fg",
+      "selectionBackgroundInactive": "bg2",
+      "selectionInactiveBackground": "bg2",
       "selectedBackground": "bg_h",
-      "selectedForeground": "fg0",
-      "selectedInactiveBackground": "bg_s",
-      "selectedBackgroundInactive": "bg_s",
+      "selectedForeground": "fg",
+      "selectedInactiveBackground": "bg_h",
+      "selectedBackgroundInactive": "bg_h",
       "hoverBackground": "#28282866",
       "borderColor": "bg1",
       "disabledBorderColor": "bg_h",
@@ -73,7 +73,7 @@
       "startBorderColor": "bg2",
       "endBorderColor": "bg2",
       "default": {
-        "foreground": "fg0",
+        "foreground": "fg",
         "startBackground": "bg_s",
         "endBackground": "bg_s",
         "startBorderColor": "bg2",
@@ -84,8 +84,8 @@
     "ComboBox": {
       "nonEditableBackground": "bg",
       "ArrowButton": {
-        "iconColor": "fg0",
-        "disabledIconColor": "fg0",
+        "iconColor": "fg",
+        "disabledIconColor": "fg",
         "nonEditableBackground": "bg"
       }
     },
@@ -128,7 +128,7 @@
     },
     "Table": {
       "stripeColor": "bg_s",
-      "lightSelectionForeground": "fg0",
+      "lightSelectionForeground": "fg",
       "lightSelectionInactiveForeground": "fg4",
       "lightSelectionBackground": "bg2",
       "lightSelectionInactiveBackground": "bg"
