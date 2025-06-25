@@ -12,8 +12,7 @@ import com.intellij.psi.util.prevLeaf
  * Annotators may be instantiated multiple times:
  * https://intellij-support.jetbrains.com/hc/en-us/community/posts/20963089597586-Can-t-figure-out-why-I-have-two-instances-of-annotator
  *
- * So to avoid re-allocating this array, you should define it as a static field on the annotator's
- * companion object.
+ * So to avoid re-allocating this array, you should define it as a static top-level variable.
  */
 typealias HighlightingConfig = Array<HighlightingGroup>
 

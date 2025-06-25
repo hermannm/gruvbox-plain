@@ -33,4 +33,8 @@ tasks.named<RunIdeTask>("runIde") {
   jvmArgumentProviders += CommandLineArgumentProvider { listOf("-Didea.kotlin.plugin.use.k2=true") }
 }
 
-kotlin { jvmToolchain(21) }
+kotlin {
+  jvmToolchain(21)
+
+  compilerOptions { freeCompilerArgs.set(listOf("-Xwhen-guards")) }
+}
