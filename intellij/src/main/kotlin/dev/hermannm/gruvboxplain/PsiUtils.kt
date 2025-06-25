@@ -11,3 +11,7 @@ fun PsiElement.name(): String? {
 fun PsiElement.previousNonSpaceLeaf(): PsiElement? {
   return this.prevLeaf(filter = { !it.textMatches(" ") })
 }
+
+fun PsiElement?.isSpace(): Boolean {
+  return this != null && textMatches(" ")
+}

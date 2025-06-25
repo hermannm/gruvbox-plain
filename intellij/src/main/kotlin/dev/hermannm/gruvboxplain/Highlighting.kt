@@ -3,6 +3,8 @@ package dev.hermannm.gruvboxplain
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
+import com.intellij.psi.util.nextLeaf
+import com.intellij.psi.util.prevLeaf
 
 /**
  * Parameter passed to [BaseAnnotator].
@@ -34,9 +36,9 @@ class HighlightingGroup(
             Highlighting.PUNCTUATION,
             symbols = arrayOf("<", ">"),
             // We don't want to match less than/greater than operators (as we still want those to
-            // use keyword highlighting). These will typically be preceded by a space, so we use
-            // that to selectively apply this highlighting.
-            applyIf = { element -> element.prevSibling?.textMatches(" ") == false },
+            // use keyword highlighting). These will typically be preceded and followed by a space,
+            // so we use that to selectively apply this highlighting.
+            applyIf = { element -> !element.prevLeaf().isSpace() || !element.nextLeaf().isSpace() },
         )
   }
 }
