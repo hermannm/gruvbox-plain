@@ -5,3 +5,4 @@ intellij/**/build
 intellij/**/.kotlin
 intellij/**/.intellijPlatform
 *.vsix
+.DS_Store
