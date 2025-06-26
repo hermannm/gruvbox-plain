@@ -28,7 +28,7 @@ private val KOTLIN_HIGHLIGHTING_CONFIG: HighlightingConfig =
         HighlightingGroup.GENERIC_BRACKETS,
     )
 
-class KotlinAnnotator : BaseAnnotator(KOTLIN_HIGHLIGHTING_CONFIG) {
+public class KotlinAnnotator : BaseAnnotator(KOTLIN_HIGHLIGHTING_CONFIG) {
   override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
     when (element.name()) {
       // If element is a package/import declaration, we highlight package path elements

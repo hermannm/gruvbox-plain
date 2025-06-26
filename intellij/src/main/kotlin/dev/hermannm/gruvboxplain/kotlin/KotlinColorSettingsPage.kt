@@ -4,7 +4,7 @@ package dev.hermannm.gruvboxplain.kotlin
 
 import dev.hermannm.gruvboxplain.BaseColorSettingsPage
 
-class KotlinColorSettingsPage : BaseColorSettingsPage() {
+public class KotlinColorSettingsPage : BaseColorSettingsPage() {
   override fun getDisplayName(): String = "Kotlin (gruvbox-plain)"
 
   override fun getDemoText(): String {

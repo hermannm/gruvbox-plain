@@ -37,4 +37,4 @@ private val JAVA_HIGHLIGHTING_CONFIG: HighlightingConfig =
         HighlightingGroup.GENERIC_BRACKETS,
     )
 
-class JavaAnnotator : BaseAnnotator(JAVA_HIGHLIGHTING_CONFIG)
+public class JavaAnnotator : BaseAnnotator(JAVA_HIGHLIGHTING_CONFIG)

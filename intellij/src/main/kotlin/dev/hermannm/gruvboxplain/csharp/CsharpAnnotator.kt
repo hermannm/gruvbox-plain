@@ -47,4 +47,4 @@ private val CSHARP_HIGHLIGHTING_CONFIG: HighlightingConfig =
         HighlightingGroup.GENERIC_BRACKETS,
     )
 
-class CsharpAnnotator : BaseAnnotator(CSHARP_HIGHLIGHTING_CONFIG)
+public class CsharpAnnotator : BaseAnnotator(CSHARP_HIGHLIGHTING_CONFIG)

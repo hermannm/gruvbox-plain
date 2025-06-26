@@ -36,5 +36,7 @@ tasks.named<RunIdeTask>("runIde") {
 kotlin {
   jvmToolchain(21)
 
+  explicitApi()
+
   compilerOptions { freeCompilerArgs.set(listOf("-Xwhen-guards")) }
 }

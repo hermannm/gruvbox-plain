@@ -6,7 +6,7 @@ import com.intellij.ide.highlighter.JavaFileHighlighter
 import com.intellij.openapi.fileTypes.SyntaxHighlighter
 import dev.hermannm.gruvboxplain.BaseColorSettingsPage
 
-class JavaColorSettingsPage : BaseColorSettingsPage() {
+public class JavaColorSettingsPage : BaseColorSettingsPage() {
   override fun getDisplayName(): String = "Java (gruvbox-plain)"
 
   override fun getDemoText(): String {

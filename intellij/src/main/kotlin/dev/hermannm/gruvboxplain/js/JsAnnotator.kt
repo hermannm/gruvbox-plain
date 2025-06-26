@@ -29,7 +29,7 @@ private val JS_HIGHLIGHTING_CONFIG: HighlightingConfig =
         HighlightingGroup.GENERIC_BRACKETS,
     )
 
-class JsAnnotator : BaseAnnotator(JS_HIGHLIGHTING_CONFIG) {
+public class JsAnnotator : BaseAnnotator(JS_HIGHLIGHTING_CONFIG) {
   override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
     when (element.name()) {
       // Some function/constructor calls are not highlighted correctly, e.g. when a function is

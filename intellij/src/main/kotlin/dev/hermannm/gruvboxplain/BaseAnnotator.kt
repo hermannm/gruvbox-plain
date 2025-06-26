@@ -5,7 +5,8 @@ import com.intellij.lang.annotation.Annotator
 import com.intellij.lang.annotation.HighlightSeverity
 import com.intellij.psi.PsiElement
 
-open class BaseAnnotator(
+public open class BaseAnnotator
+internal constructor(
     private val highlightingConfig: HighlightingConfig,
 ) : Annotator {
   override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
@@ -18,7 +19,7 @@ open class BaseAnnotator(
   }
 }
 
-fun applyHighlighting(
+internal fun applyHighlighting(
     highlighting: Highlighting,
     element: PsiElement,
     annotationHolder: AnnotationHolder

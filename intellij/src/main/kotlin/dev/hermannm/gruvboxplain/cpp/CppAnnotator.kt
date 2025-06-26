@@ -46,4 +46,4 @@ private val CPP_HIGHLIGHTING_CONFIG: HighlightingConfig =
         ),
     )
 
-class CppAnnotator : BaseAnnotator(CPP_HIGHLIGHTING_CONFIG)
+public class CppAnnotator : BaseAnnotator(CPP_HIGHLIGHTING_CONFIG)

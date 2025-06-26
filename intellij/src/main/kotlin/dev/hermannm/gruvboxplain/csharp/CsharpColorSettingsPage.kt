@@ -4,7 +4,7 @@ package dev.hermannm.gruvboxplain.csharp
 
 import dev.hermannm.gruvboxplain.BaseColorSettingsPage
 
-class CsharpColorSettingsPage : BaseColorSettingsPage() {
+public class CsharpColorSettingsPage : BaseColorSettingsPage() {
   override fun getDisplayName(): String = "C# (gruvbox-plain)"
 
   override fun getDemoText(): String {

@@ -4,14 +4,14 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.util.elementType
 import com.intellij.psi.util.prevLeaf
 
-fun PsiElement.name(): String? {
+internal fun PsiElement.name(): String? {
   return this.elementType?.toString()
 }
 
-fun PsiElement.previousNonSpaceLeaf(): PsiElement? {
+internal fun PsiElement.previousNonSpaceLeaf(): PsiElement? {
   return this.prevLeaf(filter = { !it.textMatches(" ") })
 }
 
-fun PsiElement?.isSpace(): Boolean {
+internal fun PsiElement?.isSpace(): Boolean {
   return this != null && textMatches(" ")
 }

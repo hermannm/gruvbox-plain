@@ -4,7 +4,7 @@ package dev.hermannm.gruvboxplain.cpp
 
 import dev.hermannm.gruvboxplain.BaseColorSettingsPage
 
-class CppColorSettingsPage : BaseColorSettingsPage() {
+public class CppColorSettingsPage : BaseColorSettingsPage() {
   override fun getDisplayName(): String = "C++ (gruvbox-plain)"
 
   override fun getDemoText(): String {

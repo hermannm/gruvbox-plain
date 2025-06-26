@@ -14,7 +14,7 @@ import com.intellij.psi.util.prevLeaf
  *
  * So to avoid re-allocating this array, you should define it as a static top-level variable.
  */
-typealias HighlightingConfig = Array<HighlightingGroup>
+internal typealias HighlightingConfig = Array<HighlightingGroup>
 
 /**
  * Will apply [highlighting] to elements with text matching one of [symbols] and where [applyIf]
@@ -22,7 +22,7 @@ typealias HighlightingConfig = Array<HighlightingGroup>
  *
  * [symbols] and [applyIf] should not both be `null`.
  */
-class HighlightingGroup(
+internal class HighlightingGroup(
     @JvmField val highlighting: Highlighting,
     @JvmField val symbols: Array<String>? = null,
     @JvmField val applyIf: ((PsiElement) -> Boolean)? = null,
@@ -42,7 +42,7 @@ class HighlightingGroup(
   }
 }
 
-enum class Highlighting(@JvmField val textAttributesKey: TextAttributesKey) {
+internal enum class Highlighting(@JvmField val textAttributesKey: TextAttributesKey) {
   KEYWORD(
       TextAttributesKey.createTextAttributesKey(
           "GRUVBOX_PLAIN_KEYWORD",

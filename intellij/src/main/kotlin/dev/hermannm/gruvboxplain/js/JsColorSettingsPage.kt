@@ -4,7 +4,7 @@ package dev.hermannm.gruvboxplain.js
 
 import dev.hermannm.gruvboxplain.BaseColorSettingsPage
 
-class JsColorSettingsPage : BaseColorSettingsPage() {
+public class JsColorSettingsPage : BaseColorSettingsPage() {
   override fun getDisplayName(): String = "JavaScript (gruvbox-plain)"
 
   override fun getDemoText(): String {

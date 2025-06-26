@@ -13,4 +13,4 @@ private val XML_HIGHLIGHTING_CONFIG: HighlightingConfig =
         ),
     )
 
-class XmlAnnotator : BaseAnnotator(XML_HIGHLIGHTING_CONFIG)
+public class XmlAnnotator : BaseAnnotator(XML_HIGHLIGHTING_CONFIG)

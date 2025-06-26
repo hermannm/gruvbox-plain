@@ -4,7 +4,7 @@ package dev.hermannm.gruvboxplain.xml
 
 import dev.hermannm.gruvboxplain.BaseColorSettingsPage
 
-class XmlColorSettingsPage : BaseColorSettingsPage() {
+public class XmlColorSettingsPage : BaseColorSettingsPage() {
   override fun getDisplayName(): String = "XML (gruvbox-plain)"
 
   override fun getDemoText(): String {
