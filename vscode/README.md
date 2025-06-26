@@ -1,6 +1,10 @@
 Theme based on [`morhetz/gruvbox`](https://github.com/morhetz/gruvbox), but with a plainer color palette. Comes with a
 cold and a warm variant.
 
+I recommend installing the
+[Gruvbox Material Icons extension](https://marketplace.visualstudio.com/items?itemName=navernoedenis.gruvbox-material-icons)
+as well, to complete the theme.
+
 ## Color Scheme
 
 `gruvbox-plain` uses a limited subset of the gruvbox dark mode color palette. The table below shows the general usage of

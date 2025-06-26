@@ -66,6 +66,10 @@ Now `gruvbox-plain-cold` and `gruvbox-plain-warm` should be available under `Set
 
 Now `gruvbox-plain-cold` and `gruvbox-plain-warm` should be available under `Settings` -> `Workbench: Color Theme`!
 
+I recommend installing the
+[Gruvbox Material Icons extension](https://marketplace.visualstudio.com/items?itemName=navernoedenis.gruvbox-material-icons)
+as well, to complete the theme for VSCode.
+
 ## Credits
 
 - [`morhetz/gruvbox`](https://github.com/morhetz/gruvbox) for the original color scheme
