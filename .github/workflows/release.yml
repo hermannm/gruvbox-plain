@@ -1,0 +1,23 @@
+# When a new tag is pushed that matches "vX.X.X", creates a new GitHub release using the description
+# for that version's entry in `CHANGELOG.md`.
+name: Release
+permissions:
+  contents: write
+on:
+  push:
+    tags:
+      - v[0-9]+\.[0-9]+\.[0-9]+
+jobs:
+  create-release:
+    name: Create release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+      - name: Create GitHub release from changelog
+        uses: taiki-e/create-gh-release-action@v1.9.1
+        with:
+          changelog: CHANGELOG.md
+          branch: main
+          allow-missing-changelog: false
+          token: ${{ secrets.GITHUB_TOKEN }}
