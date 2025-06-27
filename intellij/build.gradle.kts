@@ -3,7 +3,7 @@ import org.jetbrains.intellij.platform.gradle.tasks.RunIdeTask
 
 group = "dev.hermannm"
 
-version = "0.3.0"
+version = "0.4.0"
 
 plugins {
   kotlin("jvm") version "2.2.0"

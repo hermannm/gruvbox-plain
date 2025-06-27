@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [v0.4.0] - 2025-06-27
 
 - Overhaul UI colors in IntelliJ to improve consistency
 - Improve IntelliJ syntax highlighting for:
@@ -30,7 +30,9 @@
 
 - Initial implementation of the theme for VSCode and IntelliJ
 
-[unreleased]: https://github.com/hermannm/gruvbox-plain/compare/v0.3.0...HEAD
+[unreleased]: https://github.com/hermannm/gruvbox-plain/compare/v0.4.0...HEAD
+
+[v0.4.0]: https://github.com/hermannm/gruvbox-plain/compare/v0.3.0...v0.4.0
 
 [v0.3.0]: https://github.com/hermannm/gruvbox-plain/compare/v0.2.0...v0.3.0
 

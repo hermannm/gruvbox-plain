@@ -1,7 +1,7 @@
 {
   "name": "gruvbox-plain",
   "displayName": "gruvbox-plain",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "publisher": "hermannm",
   "author": {
     "name": "hermannm",
@@ -13,6 +13,20 @@
   "repository": {
     "url": "https://github.com/hermannm/gruvbox-plain.git",
     "type": "git"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "gruvbox-plain-cold",
+        "uiTheme": "vs-dark",
+        "path": "./themes/gruvbox-plain-cold-color-theme.json"
+      },
+      {
+        "label": "gruvbox-plain-warm",
+        "uiTheme": "vs-dark",
+        "path": "./themes/gruvbox-plain-warm-color-theme.json"
+      }
+    ]
   },
   "icon": "img/gruvbox-plain-cold-logo.png",
   "engines": {
@@ -29,19 +43,5 @@
   "galleryBanner": {
     "color": "#3c3836",
     "theme": "dark"
-  },
-  "contributes": {
-    "themes": [
-      {
-        "label": "gruvbox-plain-cold",
-        "uiTheme": "vs-dark",
-        "path": "./themes/gruvbox-plain-cold-color-theme.json"
-      },
-      {
-        "label": "gruvbox-plain-warm",
-        "uiTheme": "vs-dark",
-        "path": "./themes/gruvbox-plain-warm-color-theme.json"
-      }
-    ]
   }
 }
