@@ -1,4 +1,4 @@
-# `gruvbox-plain` changelog
+# Changelog
 
 ## [Unreleased]
 

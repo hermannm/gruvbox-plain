@@ -1,15 +1,15 @@
-<idea-plugin>
+<idea-plugin url="https://github.com/hermannm/gruvbox-plain">
   <id>dev.hermannm.gruvboxplain</id>
   <name>gruvbox-plain</name>
-  <vendor email="hermann.morkrid@gmail.com" url="https://hermannm.dev">hermannm</vendor>
-  <depends>com.intellij.modules.platform</depends>
-  <extensions defaultExtensionNs="org.jetbrains.kotlin">
-    <supportsKotlinPluginMode supportsK2="true"/>
-  </extensions>
+  <vendor url="https://hermannm.dev">Hermann Mørkrid</vendor>
   <extensions defaultExtensionNs="com.intellij">
     <themeProvider id="dev.hermannm.gruvboxplain.warm" path="/gruvbox-plain-warm.theme.json"/>
     <themeProvider id="dev.hermannm.gruvboxplain.cold" path="/gruvbox-plain-cold.theme.json"/>
   </extensions>
+  <extensions defaultExtensionNs="org.jetbrains.kotlin">
+    <supportsKotlinPluginMode supportsK2="true"/>
+  </extensions>
+  <depends>com.intellij.modules.platform</depends>
   <depends optional="true" config-file="plugin-java.xml">com.intellij.java</depends>
   <depends optional="true" config-file="plugin-kotlin.xml">org.jetbrains.kotlin</depends>
   <depends optional="true" config-file="plugin-js.xml">JavaScript</depends>
@@ -17,8 +17,8 @@
   <depends optional="true" config-file="plugin-csharp.xml">com.intellij.modules.rider</depends>
   <depends optional="true" config-file="plugin-cpp.xml">com.intellij.modules.clion</depends>
   <description><![CDATA[
-    <p>Theme based on <a href="https://github.com/morhetz/gruvbox"><code>morhetz/gruvbox</code></a>, but with a plainer color palette. Comes with a cold and a warm variant.</p>
-    <h3>Color Scheme</h3>
+    <p>Color theme based on <a href="https://github.com/morhetz/gruvbox"><code>morhetz/gruvbox</code></a>, but with a plainer color palette. Comes with a cold and a warm variant.</p>
+    <h3>Color Palette</h3>
     <p><code>gruvbox-plain</code> uses a limited subset of the gruvbox dark mode color palette. The table below shows the general usage of the different colors.</p>
     <table>
       <tr>

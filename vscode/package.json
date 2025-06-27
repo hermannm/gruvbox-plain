@@ -1,25 +1,35 @@
 {
   "name": "gruvbox-plain",
   "displayName": "gruvbox-plain",
+  "version": "0.3.0",
   "publisher": "hermannm",
   "author": {
     "name": "hermannm",
     "url": "https://hermannm.dev"
   },
-  "description": "Theme based on morhetz/gruvbox, but with a plainer color palette.",
-  "icon": "img/gruvbox-plain-cold-logo.png",
+  "description": "Color theme based on morhetz/gruvbox, but with a plainer color palette.",
+  "license": "MIT",
+  "homepage": "https://github.com/hermannm/gruvbox-plain",
   "repository": {
-    "url": "https://github.com/hermannm/gruvbox-plain",
+    "url": "https://github.com/hermannm/gruvbox-plain.git",
     "type": "git"
   },
-  "version": "0.3.0",
-  "license": "MIT",
+  "icon": "img/gruvbox-plain-cold-logo.png",
   "engines": {
     "vscode": "^1.63.0"
   },
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "color-theme",
+    "theme",
+    "gruvbox"
+  ],
+  "galleryBanner": {
+    "color": "#3c3836",
+    "theme": "dark"
+  },
   "contributes": {
     "themes": [
       {
