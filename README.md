@@ -6,9 +6,8 @@ Color theme for IntelliJ (+ other JetBrains IDEs) and VSCode, based on
 [`morhetz/gruvbox`](https://github.com/morhetz/gruvbox) but with a plainer color palette. Comes with
 a cold and a warm variant.
 
-Published on:
-- JetBrains Marketplace: https://plugins.jetbrains.com/plugin/27768-gruvbox-plain
-- VSCode Marketplace: https://marketplace.visualstudio.com/items?itemName=hermannm.gruvbox-plain
+- IntelliJ plugin: https://plugins.jetbrains.com/plugin/27768-gruvbox-plain
+- VSCode extension: https://marketplace.visualstudio.com/items?itemName=hermannm.gruvbox-plain
 
 **Contents**
 
