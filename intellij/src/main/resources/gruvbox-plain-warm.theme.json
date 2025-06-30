@@ -187,7 +187,7 @@
       "Green.Solid": "#98971a",
       "Green.Stroke": "#98971a",
       "Orange.Fill": "#3c3836",
-      "Orange.Stroke": "#d65d0e",
+      "Orange.Stroke": "#fe8019",
       "Purple.Fill": "#3c3836",
       "Purple.Stroke": "#d3869b",
       "Red.Fill": "#3c3836",
@@ -259,7 +259,7 @@
     "#25324d": "#3c3836",
     "#a571e6": "#d3869b",
     "#2f2936": "#3c3836",
-    "#c77d55": "#d65d0e",
+    "#c77d55": "#fe8019",
     "#45322b": "#3c3836",
     "#b589ec": "#689d6a"
   }
