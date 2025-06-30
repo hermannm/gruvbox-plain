@@ -1,0 +1,13 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij">
+    <annotator
+      language="Rust"
+      implementationClass="dev.hermannm.gruvboxplain.rust.RustAnnotator"
+      order="first"
+    />
+    <colorSettingsPage
+      implementation="dev.hermannm.gruvboxplain.rust.RustColorSettingsPage"
+      order="first"
+    />
+  </extensions>
+</idea-plugin>

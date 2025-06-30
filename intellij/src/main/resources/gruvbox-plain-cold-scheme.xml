@@ -1448,5 +1448,127 @@
         <option name="FOREGROUND" value="8ec07c"/>
       </value>
     </option>
+    <option name="org.rust.CFG_DISABLED_CODE">
+      <value>
+        <option name="FOREGROUND" value="a89984"/>
+      </value>
+    </option>
+    <option name="org.rust.CRATE">
+      <value>
+        <option name="FOREGROUND" value="83a598"/>
+      </value>
+    </option>
+    <option name="org.rust.DOC_CODE">
+      <value>
+        <option name="FOREGROUND" value="928374"/>
+      </value>
+    </option>
+    <option name="org.rust.DOC_EMPHASIS">
+      <value/>
+    </option>
+    <option name="org.rust.DOC_HEADING">
+      <value>
+        <option name="FOREGROUND" value="928374"/>
+      </value>
+    </option>
+    <option name="org.rust.DOC_LINK">
+      <value>
+        <option name="FOREGROUND" value="928374"/>
+      </value>
+    </option>
+    <option name="org.rust.DOC_STRONG">
+      <value/>
+    </option>
+    <option name="org.rust.ENUM_VARIANT">
+      <value>
+        <option name="FOREGROUND" value="83a598"/>
+      </value>
+    </option>
+    <option name="org.rust.GENERATED_ITEM">
+      <value>
+        <option name="FOREGROUND" value="98971a"/>
+      </value>
+    </option>
+    <option name="org.rust.INLINE_ERROR_DESCRIPTION">
+      <value>
+        <option name="FOREGROUND" value="fb4934"/>
+        <option name="FONT_TYPE" value="2"/>
+      </value>
+    </option>
+    <option name="org.rust.INLINE_EXPLANATION">
+      <value>
+        <option name="FOREGROUND" value="83a598"/>
+        <option name="FONT_TYPE" value="2"/>
+      </value>
+    </option>
+    <option name="org.rust.INLINE_WARNING_DESCRIPTION">
+      <value>
+        <option name="FOREGROUND" value="fabd2f"/>
+        <option name="FONT_TYPE" value="2"/>
+      </value>
+    </option>
+    <option name="org.rust.LIFETIME">
+      <value>
+        <option name="FOREGROUND" value="83a598"/>
+      </value>
+    </option>
+    <option name="org.rust.MACRO">
+      <value>
+        <option name="FOREGROUND" value="b8bb26"/>
+      </value>
+    </option>
+    <option name="org.rust.MACRO_BINDING_IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="ebdbb2"/>
+      </value>
+    </option>
+    <option name="org.rust.MACRO_COLON">
+      <value>
+        <option name="FOREGROUND" value="a89984"/>
+      </value>
+    </option>
+    <option name="org.rust.MACRO_DOLLAR">
+      <value>
+        <option name="FOREGROUND" value="a89984"/>
+      </value>
+    </option>
+    <option name="org.rust.MACRO_GROUP_ELEMENTS">
+      <value>
+        <option name="FOREGROUND" value="a89984"/>
+      </value>
+    </option>
+    <option name="org.rust.MACRO_META_VAR_IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="83a598"/>
+      </value>
+    </option>
+    <option name="org.rust.MODULE">
+      <value>
+        <option name="FOREGROUND" value="83a598"/>
+      </value>
+    </option>
+    <option name="org.rust.PRIMITIVE_TYPE">
+      <value>
+        <option name="FOREGROUND" value="83a598"/>
+      </value>
+    </option>
+    <option name="org.rust.SELF_EXPRESSION">
+      <value>
+        <option name="FOREGROUND" value="8ec07c"/>
+      </value>
+    </option>
+    <option name="org.rust.SELF_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="8ec07c"/>
+      </value>
+    </option>
+    <option name="org.rust.TYPE_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="83a598"/>
+      </value>
+    </option>
+    <option name="org.rust.UNSAFE_CODE">
+      <value/>
+    </option>
   </attributes>
 </scheme>

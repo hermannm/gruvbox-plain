@@ -13,9 +13,10 @@
   <depends optional="true" config-file="plugin-java.xml">com.intellij.java</depends>
   <depends optional="true" config-file="plugin-kotlin.xml">org.jetbrains.kotlin</depends>
   <depends optional="true" config-file="plugin-js.xml">JavaScript</depends>
-  <depends optional="true" config-file="plugin-xml.xml">com.intellij.modules.xml</depends>
+  <depends optional="true" config-file="plugin-rust.xml">com.jetbrains.rust</depends>
   <depends optional="true" config-file="plugin-csharp.xml">com.intellij.modules.rider</depends>
   <depends optional="true" config-file="plugin-cpp.xml">com.intellij.modules.clion</depends>
+  <depends optional="true" config-file="plugin-xml.xml">com.intellij.modules.xml</depends>
   <description><![CDATA[
     <p>Color theme based on <a href="https://github.com/morhetz/gruvbox"><code>morhetz/gruvbox</code></a>, but with a plainer color palette. Comes with a cold and a warm variant.</p>
     <h3>Color Palette</h3>
