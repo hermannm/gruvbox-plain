@@ -2,7 +2,6 @@ package dev.hermannm.gruvboxplain
 
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
-import com.intellij.openapi.editor.colors.TextAttributesKey.createTextAttributesKey
 import com.intellij.psi.PsiElement
 import com.intellij.psi.util.nextLeaf
 import com.intellij.psi.util.prevLeaf
@@ -44,40 +43,9 @@ internal class HighlightingGroup(
 }
 
 internal enum class Highlighting(@JvmField val textAttributesKey: TextAttributesKey) {
-  KEYWORD(
-      createTextAttributesKey(
-          "GRUVBOX_PLAIN_KEYWORD",
-          DefaultLanguageHighlighterColors.KEYWORD,
-      ),
-  ),
-  TYPE(
-      createTextAttributesKey(
-          "GRUVBOX_PLAIN_TYPE",
-          DefaultLanguageHighlighterColors.CLASS_NAME,
-      ),
-  ),
-  FUNCTION(
-      createTextAttributesKey(
-          "GRUVBOX_PLAIN_FUNCTION",
-          DefaultLanguageHighlighterColors.FUNCTION_CALL,
-      ),
-  ),
-  VALUE(
-      createTextAttributesKey(
-          "GRUVBOX_PLAIN_VALUE",
-          DefaultLanguageHighlighterColors.STRING,
-      ),
-  ),
-  PUNCTUATION(
-      createTextAttributesKey(
-          "GRUVBOX_PLAIN_PUNCTUATION",
-          DefaultLanguageHighlighterColors.BRACES,
-      ),
-  ),
-  WARNING(
-      createTextAttributesKey(
-          "GRUVBOX_PLAIN_WARNING",
-          DefaultLanguageHighlighterColors.LINE_COMMENT,
-      ),
-  ),
+  KEYWORD(DefaultLanguageHighlighterColors.KEYWORD),
+  TYPE(DefaultLanguageHighlighterColors.CLASS_NAME),
+  FUNCTION(DefaultLanguageHighlighterColors.FUNCTION_CALL),
+  VALUE(DefaultLanguageHighlighterColors.STRING),
+  PUNCTUATION(DefaultLanguageHighlighterColors.BRACES),
 }

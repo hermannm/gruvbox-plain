@@ -5,9 +5,5 @@
       implementationClass="dev.hermannm.gruvboxplain.kotlin.KotlinAnnotator"
       order="first"
     />
-    <colorSettingsPage
-      implementation="dev.hermannm.gruvboxplain.kotlin.KotlinColorSettingsPage"
-      order="first"
-    />
   </extensions>
 </idea-plugin>

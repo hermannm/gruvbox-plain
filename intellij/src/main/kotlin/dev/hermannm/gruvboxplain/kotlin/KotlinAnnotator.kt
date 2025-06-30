@@ -81,8 +81,8 @@ private fun highlightFunctionCall(element: PsiElement, annotationHolder: Annotat
   val text = element.text // getText is expensive, so we only want to call it once
   val highlighting =
       when {
-        // Use warning highlighting for TODO() calls
-        text == "TODO" -> Highlighting.WARNING
+        // Don't highlight TODO() as a constructor
+        text == "TODO" -> Highlighting.FUNCTION
         // If call starts with an upper-case letter, then we highlight it as a class constructor
         text.isNotEmpty() && text.first().isUpperCase() -> Highlighting.TYPE
         // Otherwise, use normal function highlighting

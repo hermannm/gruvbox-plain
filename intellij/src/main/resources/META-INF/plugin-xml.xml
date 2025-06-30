@@ -5,9 +5,5 @@
       implementationClass="dev.hermannm.gruvboxplain.xml.XmlAnnotator"
       order="first"
     />
-    <colorSettingsPage
-      implementation="dev.hermannm.gruvboxplain.xml.XmlColorSettingsPage"
-      order="first"
-    />
   </extensions>
 </idea-plugin>

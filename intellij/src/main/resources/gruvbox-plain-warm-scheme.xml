@@ -680,11 +680,6 @@
       </value>
     </option>
     <option name="GO_TYPE_REFERENCE" baseAttributes="DEFAULT_CLASS_REFERENCE"/>
-    <option name="GRUVBOX_PLAIN_WARNING">
-      <value>
-        <option name="FOREGROUND" value="fabd2f"/>
-      </value>
-    </option>
     <option name="HANDLEBARS.DATA_PREFIX">
       <value>
         <option name="FOREGROUND" value="fabd2f"/>

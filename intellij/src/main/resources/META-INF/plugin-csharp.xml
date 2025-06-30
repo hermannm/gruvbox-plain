@@ -5,9 +5,5 @@
       implementationClass="dev.hermannm.gruvboxplain.csharp.CsharpAnnotator"
       order="first"
     />
-    <colorSettingsPage
-      implementation="dev.hermannm.gruvboxplain.csharp.CsharpColorSettingsPage"
-      order="first"
-    />
   </extensions>
 </idea-plugin>
