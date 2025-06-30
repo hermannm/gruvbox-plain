@@ -31,6 +31,7 @@ private val ADDITIONAL_HIGHLIGHTING_TAG_TO_DESCRIPTOR_MAP: Map<String, TextAttri
         "function" to Highlighting.FUNCTION.textAttributesKey,
         "value" to Highlighting.VALUE.textAttributesKey,
         "punctuation" to Highlighting.PUNCTUATION.textAttributesKey,
+        "warning" to Highlighting.WARNING.textAttributesKey,
     )
 
 private val ATTRIBUTE_DESCRIPTORS =
@@ -40,4 +41,5 @@ private val ATTRIBUTE_DESCRIPTORS =
         AttributesDescriptor("Function", Highlighting.FUNCTION.textAttributesKey),
         AttributesDescriptor("Value", Highlighting.VALUE.textAttributesKey),
         AttributesDescriptor("Punctuation", Highlighting.PUNCTUATION.textAttributesKey),
+        AttributesDescriptor("Warning", Highlighting.WARNING.textAttributesKey),
     )

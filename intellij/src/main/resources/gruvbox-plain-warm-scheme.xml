@@ -77,6 +77,11 @@
     <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="98971a"/>
   </colors>
   <attributes>
+    <option name="GRUVBOX_PLAIN_WARNING">
+      <value>
+        <option name="FOREGROUND" value="fabd2f"/>
+      </value>
+    </option>
     <option name="ABSTRACT_CLASS_NAME_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="fabd2f"/>
