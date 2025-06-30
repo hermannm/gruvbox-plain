@@ -77,11 +77,6 @@
     <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="98971a"/>
   </colors>
   <attributes>
-    <option name="GRUVBOX_PLAIN_WARNING">
-      <value>
-        <option name="FOREGROUND" value="fabd2f"/>
-      </value>
-    </option>
     <option name="ABSTRACT_CLASS_NAME_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="fabd2f"/>
@@ -685,6 +680,11 @@
       </value>
     </option>
     <option name="GO_TYPE_REFERENCE" baseAttributes="DEFAULT_CLASS_REFERENCE"/>
+    <option name="GRUVBOX_PLAIN_WARNING">
+      <value>
+        <option name="FOREGROUND" value="fabd2f"/>
+      </value>
+    </option>
     <option name="HANDLEBARS.DATA_PREFIX">
       <value>
         <option name="FOREGROUND" value="fabd2f"/>
@@ -1452,6 +1452,9 @@
       <value>
         <option name="FOREGROUND" value="8ec07c"/>
       </value>
+    </option>
+    <option name="org.rust.ATTRIBUTE">
+      <value/>
     </option>
     <option name="org.rust.CFG_DISABLED_CODE">
       <value>
