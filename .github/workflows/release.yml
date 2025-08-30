@@ -1,23 +1,25 @@
-# When a new tag is pushed that matches "vX.X.X", creates a new GitHub release using the description
-# for that version's entry in `CHANGELOG.md`.
 name: Release
-permissions:
-  contents: write
 on:
   push:
+    # Trigger release when a new semantic version tag (vX.Y.Z) is pushed
     tags:
       - v[0-9]+\.[0-9]+\.[0-9]+
+env:
+  FORCE_COLOR: 1 # For color output in GitHub Actions console (see https://force-color.org/)
 jobs:
   create-release:
     name: Create release
+    # `release-from-changelog` is a Docker action, which only works on Linux jobs
     runs-on: ubuntu-latest
+    permissions:
+      # Unfortunately, creating a release requires `contents: write` permission
+      # https://github.com/orgs/community/discussions/68252
+      contents: write
     steps:
+      # https://github.com/actions/checkout
       - name: Checkout repository
-        uses: actions/checkout@v4.2.2
-      - name: Create GitHub release from changelog
-        uses: taiki-e/create-gh-release-action@v1.9.1
-        with:
-          changelog: CHANGELOG.md
-          branch: main
-          allow-missing-changelog: false
-          token: ${{ secrets.GITHUB_TOKEN }}
+        uses: actions/checkout@v5
+      # Creates GitHub release from CHANGELOG.md entry for the pushed tag
+      # https://github.com/hermannm/release-from-changelog
+      - name: Create release from changelog
+        uses: hermannm/release-from-changelog@v0.2.5
