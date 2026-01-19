@@ -3,13 +3,13 @@ package dev.hermannm.gruvboxplain.js
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.psi.PsiElement
 import com.intellij.psi.util.nextLeaf
+import com.intellij.psi.util.prevLeaf
 import dev.hermannm.gruvboxplain.BaseAnnotator
 import dev.hermannm.gruvboxplain.Highlighting
 import dev.hermannm.gruvboxplain.HighlightingConfig
 import dev.hermannm.gruvboxplain.HighlightingGroup
 import dev.hermannm.gruvboxplain.applyHighlighting
 import dev.hermannm.gruvboxplain.name
-import dev.hermannm.gruvboxplain.previousNonSpaceLeaf
 
 private val JS_HIGHLIGHTING_CONFIG: HighlightingConfig =
     arrayOf(
@@ -56,7 +56,7 @@ private fun isFunctionCall(element: PsiElement): Boolean {
 
 private fun highlightFunctionCall(element: PsiElement, annotationHolder: AnnotationHolder) {
   val highlighting =
-      if (element.previousNonSpaceLeaf()?.name() == "JS:NEW_KEYWORD") {
+      if (element.elementBeforePreviousSpace()?.name() == "JS:NEW_KEYWORD") {
         // We want to use type highlighting for class constructors
         Highlighting.TYPE
       } else {
@@ -65,4 +65,16 @@ private fun highlightFunctionCall(element: PsiElement, annotationHolder: Annotat
       }
 
   applyHighlighting(highlighting, element, annotationHolder)
+}
+
+private fun PsiElement.elementBeforePreviousSpace(): PsiElement? {
+  var foundPreviousSpace = false
+  return this.prevLeaf {
+    if (it.textMatches(" ")) {
+      foundPreviousSpace = true
+      return@prevLeaf false
+    }
+
+    return@prevLeaf foundPreviousSpace
+  }
 }
