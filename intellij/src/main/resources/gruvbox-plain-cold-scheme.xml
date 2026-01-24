@@ -467,7 +467,9 @@
       </value>
     </option>
     <option name="DEFAULT_INSTANCE_METHOD">
-      <value/>
+      <value>
+        <option name="FOREGROUND" value="b8bb26"/>
+      </value>
     </option>
     <option name="DEFAULT_INTERFACE_NAME">
       <value>
@@ -553,7 +555,9 @@
       </value>
     </option>
     <option name="DEFAULT_STATIC_METHOD">
-      <value/>
+      <value>
+        <option name="FOREGROUND" value="b8bb26"/>
+      </value>
     </option>
     <option name="DEFAULT_STRING">
       <value>
