@@ -12,8 +12,11 @@ a cold and a warm variant.
 **Contents**
 
 - [Screenshots](#screenshots)
-- [Color Palette](#color-palette)
+- [Color palette](#color-palette)
 - [Installation](#installation)
+  - [IntelliJ/JetBrains IDEs](#intellijjetbrains-ides)
+  - [VSCode](#vscode)
+- [Maintainer's guide](#maintainers-guide)
 - [Credits](#credits)
 
 ## Screenshots
@@ -26,7 +29,7 @@ a cold and a warm variant.
 
 ![Screenshot of gruvbox-plain-warm theme in VSCode](https://github.com/hermannm/gruvbox-plain/blob/assets/screenshots/gruvbox-plain-warm-vscode.png?raw=true)
 
-## Color Palette
+## Color palette
 
 `gruvbox-plain` uses a limited subset of the gruvbox dark mode color palette. The table below shows
 the general usage of the different colors.
@@ -50,30 +53,102 @@ IntelliJ/JetBrains IDEs, or `editor.tokenColorCustomizations` in VSCode's `setti
 
 ### IntelliJ/JetBrains IDEs
 
-1. Go to the [Releases page](https://github.com/hermannm/gruvbox-plain/releases)
-2. Download the latest `gruvbox-plain-intellij-[version].zip` under Assets
-3. Open up `Settings` in your IDE
-4. Go to the `Plugins` tab
-5. Click the cogwheel in the top bar
-6. Click `Install Plugin from Disk...`, and select the downloaded `.zip` file
+Click "Get" on the JetBrains Marketplace page:
+https://plugins.jetbrains.com/plugin/27768-gruvbox-plain
 
 Now `gruvbox-plain-cold` and `gruvbox-plain-warm` should be available under `Settings` ->
-`Appearance & Behavior` -> `Appearance` -> `Theme`!
+`Appearance and Behavior` -> `Appearance` -> `Theme`!
+
+#### Manual installation
+
+1. Clone the repo:
+   ```
+   git clone https://github.com/hermannm/gruvbox-plain.git
+   ```
+2. Navigate to the repo's `intellij` subfolder in your terminal
+3. Build the plugin:
+   ```
+   ./gradlew buildPlugin
+   ```
+4. Open up `Settings` in your IDE
+5. Go to the `Plugins` tab
+6. Click the cogwheel in the top bar
+7. Click `Install Plugin from Disk...`
+8. Select the `.zip` file from `gruvbox-plain/intellij/build/distributions`
 
 ### VSCode
 
-1. Go to the [Releases page](https://github.com/hermannm/gruvbox-plain/releases)
-2. Download the latest `gruvbox-plain-vscode-[version].vsix` under Assets
-3. Go to the `Extensions` tab in VSCode
-4. Click `...` in the top right of the tab
-5. Click `Install from VSIX...`, and select the downloaded `.vsix` file
+Click "Install" on the Visual Studio Marketplace page:
+https://marketplace.visualstudio.com/items?itemName=hermannm.gruvbox-plain
 
 Now `gruvbox-plain-cold` and `gruvbox-plain-warm` should be available under `Settings` ->
 `Workbench: Color Theme`!
 
 I recommend installing the
 [Gruvbox Material Icons extension](https://marketplace.visualstudio.com/items?itemName=navernoedenis.gruvbox-material-icons)
-as well, to complete the theme for VSCode.
+as well, to complete the theme.
+
+#### Manual installation
+
+1. Install the VSCode extension manager:
+   ```
+   npm install -g @vscode/vsce
+   ```
+2. Clone the repo:
+   ```
+   git clone https://github.com/hermannm/gruvbox-plain.git
+   ```
+3. Navigate to the repo's `vscode` subfolder in your terminal
+4. Package the extension:
+   ```
+   vsce package
+   ```
+5. Go to the `Extensions` tab in VSCode
+6. Click `...` in the top right of the tab
+7. Click `Install from VSIX...`, and select the `.vsix` file from `gruvbox-plain/vscode`
+
+## Maintainer's guide
+
+### Publishing a new release
+
+- Bump `version` in `intellij/build.gradle.kts` and `vscode/package.json`
+- Add an entry to `CHANGELOG.md` (with the current date)
+    - Remember to update the link section, and bump the version for the `[Unreleased]` link
+- Copy `CHANGELOG.md` to `vscode/CHANGELOG.md`
+- Publish JetBrains plugin:
+  - Build the plugin:
+    ```
+    ./intellij/gradlew buildPlugin
+    ```
+  - Go to https://plugins.jetbrains.com/author/me, and log in with your JetBrains account
+  - Click the plugin, and then "Upload update"
+  - Select the newly built `.zip` file from `gruvbox-plain/intellij/build/distributions`
+  - Confirm "Upload update"
+- Publish VSCode extension:
+  - Check that you have `vsce` installed:
+    ```
+    vsce --version
+    ```
+    - If you don't have it installed:
+      ```
+      npm install -g @vscode/vsce
+      ```
+    - If you do have it installed, update it:
+      ```
+      npm update -g @vscode/vsce
+      ```
+  - Login:
+    ```
+    vsce login
+    ```
+    - You may have to get a personal access token from https://dev.azure.com
+      - Top right settings icon -> Personal Access Tokens
+  - Publish:
+    ```
+    vsce publish
+    ```
+    - If you have issues, see the docs:
+      https://code.visualstudio.com/api/working-with-extensions/publishing-extension
 
 ## Credits
 
