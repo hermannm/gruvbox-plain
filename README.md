@@ -146,7 +146,7 @@ as well, to complete the theme.
       ```
   - Login:
     ```
-    vsce login
+    vsce login <publisher>
     ```
     - You may have to get a personal access token from https://dev.azure.com
       - Top right settings icon -> Personal Access Tokens
