@@ -122,13 +122,18 @@ private fun PsiElement.isType(): Boolean {
 
 private fun PsiElement.elementBeforePreviousSpace(): PsiElement? {
   var foundPreviousSpace = false
-  return this.prevLeaf {
-    if (it.textMatches(" ")) {
-      @Suppress("AssignedValueIsNeverRead") // False positive
-      foundPreviousSpace = true
-      return@prevLeaf false
-    }
+  val element =
+      this.prevLeaf {
+        if (it.textMatches(";") || it.textMatches(")") || it.textMatches("(")) {
+          return@prevLeaf true
+        }
 
-    return@prevLeaf foundPreviousSpace
-  }
+        if (it.textMatches(" ")) {
+          foundPreviousSpace = true
+          return@prevLeaf false
+        }
+
+        return@prevLeaf foundPreviousSpace
+      }
+  return if (foundPreviousSpace) element else null
 }
