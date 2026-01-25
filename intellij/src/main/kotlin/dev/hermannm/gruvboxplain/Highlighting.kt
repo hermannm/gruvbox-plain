@@ -44,6 +44,7 @@ internal class HighlightingGroup(
 
 internal enum class Highlighting(@JvmField val textAttributesKey: TextAttributesKey) {
   KEYWORD(DefaultLanguageHighlighterColors.KEYWORD),
+  VARIABLE(DefaultLanguageHighlighterColors.IDENTIFIER),
   TYPE(DefaultLanguageHighlighterColors.CLASS_NAME),
   FUNCTION(DefaultLanguageHighlighterColors.FUNCTION_CALL),
   VALUE(DefaultLanguageHighlighterColors.STRING),
