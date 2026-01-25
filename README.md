@@ -57,7 +57,7 @@ Click "Get" on the JetBrains Marketplace page:
 https://plugins.jetbrains.com/plugin/27768-gruvbox-plain
 
 Now `gruvbox-plain-cold` and `gruvbox-plain-warm` should be available under `Settings` ->
-`Appearance and Behavior` -> `Appearance` -> `Theme`!
+`Appearance & Behavior` -> `Appearance` -> `Theme`!
 
 #### Manual installation
 
