@@ -115,6 +115,10 @@ as well, to complete the theme.
 - Add an entry to `CHANGELOG.md` (with the current date)
     - Remember to update the link section, and bump the version for the `[Unreleased]` link
 - Copy `CHANGELOG.md` to `vscode/CHANGELOG.md`
+- Create commit and tag for the release (update `TAG` variable in below command):
+  ```
+  TAG=vX.Y.Z && git commit -m "Release ${TAG}" && git tag -a "${TAG}" -m "Release ${TAG}" && git log --oneline -2
+  ```
 - Publish JetBrains plugin:
   - Build the plugin:
     ```
@@ -149,6 +153,11 @@ as well, to complete the theme.
     ```
     - If you have issues, see the docs:
       https://code.visualstudio.com/api/working-with-extensions/publishing-extension
+- Push the commit and tag:
+  ```
+  git push && git push --tags
+  ```
+    - Our release workflow will then create a GitHub release with the pushed tag's changelog entry
 
 ## Credits
 
