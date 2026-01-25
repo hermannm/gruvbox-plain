@@ -65,16 +65,16 @@ Now `gruvbox-plain-cold` and `gruvbox-plain-warm` should be available under `Set
    ```
    git clone https://github.com/hermannm/gruvbox-plain.git
    ```
-2. Navigate to the repo's `intellij` subfolder in your terminal
-3. Build the plugin:
-   ```
-   ./gradlew buildPlugin
-   ```
-4. Open up `Settings` in your IDE
-5. Go to the `Plugins` tab
-6. Click the cogwheel in the top bar
-7. Click `Install Plugin from Disk...`
-8. Select the `.zip` file from `gruvbox-plain/intellij/build/distributions`
+2. Open the repo's `intellij` subfolder in IntelliJ
+3. Install the "Plugin DevKit" plugin: https://plugins.jetbrains.com/plugin/22851-plugin-devkit
+4. Build the plugin:
+   - Open the Gradle menu (click the Gradle icon on the taskbar to the right in IntelliJ)
+   - Click `Tasks` -> `intellij platform` -> `buildPlugin`
+5. Open up `Settings` in your IDE
+6. Go to the `Plugins` tab
+7. Click the cogwheel in the top bar
+8. Click `Install Plugin from Disk...`
+9. Select the `.zip` file from `gruvbox-plain/intellij/build/distributions`
 
 ### VSCode
 
@@ -120,15 +120,18 @@ as well, to complete the theme.
   TAG=vX.Y.Z && git commit -m "Release ${TAG}" && git tag -a "${TAG}" -m "Release ${TAG}" && git log --oneline -2
   ```
 - Publish JetBrains plugin:
+  - Open the `intellij` subfolder in IntelliJ
+  - Check that you have the "Plugin DevKit" plugin installed:
+    https://plugins.jetbrains.com/plugin/22851-plugin-devkit
   - Build the plugin:
-    ```
-    ./intellij/gradlew buildPlugin
-    ```
+    - Open the Gradle menu (click the Gradle icon on the taskbar to the right in IntelliJ)
+    - Click `Tasks` -> `intellij platform` -> `buildPlugin`
   - Go to https://plugins.jetbrains.com/author/me, and log in with your JetBrains account
   - Click the plugin, and then "Upload update"
   - Select the newly built `.zip` file from `gruvbox-plain/intellij/build/distributions`
   - Confirm "Upload update"
 - Publish VSCode extension:
+  - Navigate to `vscode` subfolder in your terminal
   - Check that you have `vsce` installed:
     ```
     vsce --version
