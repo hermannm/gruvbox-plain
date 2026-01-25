@@ -1,5 +1,14 @@
 # Changelog
 
+## [v0.5.0] - 2026-01-25
+
+- Improve IntelliJ syntax highlighting for:
+  - Go
+  - Rust
+  - TypeScript/JavaScript (more consistent highlighting of function calls, getters, namespaces and
+    imports)
+- Update installation instructions
+
 ## [v0.4.0] - 2025-06-27
 
 - Overhaul UI colors in IntelliJ to improve consistency
@@ -30,7 +39,11 @@
 
 - Initial implementation of the theme for VSCode and IntelliJ
 
-[unreleased]: https://github.com/hermannm/gruvbox-plain/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/hermannm/gruvbox-plain/compare/v0.5.0...HEAD
+
+[v0.5.0]: https://github.com/hermannm/gruvbox-plain/compare/v0.4.0...v0.5.0
+
+[v0.4.0]: https://github.com/hermannm/gruvbox-plain/compare/v0.3.0...v0.4.0
 
 [v0.4.0]: https://github.com/hermannm/gruvbox-plain/compare/v0.3.0...v0.4.0
 
