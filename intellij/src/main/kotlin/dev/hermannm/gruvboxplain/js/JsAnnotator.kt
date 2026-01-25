@@ -19,6 +19,10 @@ private val JS_HIGHLIGHTING_CONFIG: HighlightingConfig =
             symbols = arrayOf("..."),
         ),
         HighlightingGroup(
+            Highlighting.VALUE,
+            symbols = arrayOf("this"),
+        ),
+        HighlightingGroup(
             Highlighting.PUNCTUATION,
             symbols = arrayOf(":"),
             // We want colons to be highlighted as punctuation when specifying object fields
