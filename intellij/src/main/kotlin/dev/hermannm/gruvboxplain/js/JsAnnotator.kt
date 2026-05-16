@@ -82,15 +82,20 @@ private fun getIdentifierHighlighting(
     }
 
     /**
-     * If next element is a dot, then this might be a namespace identifier in front of a type, which
-     * we also want to highlight as a type.
+     * If next element is a dot, then this might be either:
+     * - A class that we're accessing a static member of, which we want to highlight as a type
+     * - A namespace identifier in front of a type, which we also want to highlight as a type
      */
     if (nextElement.textMatches(".")) {
+      if (element.isType()) {
+        return Highlighting.TYPE
+      }
+
       val secondNextElement = nextElement.nextLeaf()
       if (
           secondNextElement != null &&
               secondNextElement.name() == "JS:IDENTIFIER" &&
-              secondNextElement.isType()
+              (secondNextElement.isType())
       ) {
         return Highlighting.TYPE
       }
