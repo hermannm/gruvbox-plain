@@ -67,7 +67,10 @@ private fun getIdentifierHighlighting(
      * another function), so we do special-case handling of all function-call-esque syntax here.
      */
     if (nextElement.textMatches("(")) {
-      return if (element.elementBeforePreviousSpace()?.name() == "JS:NEW_KEYWORD") {
+      return if (
+          element.prevLeaf()?.textMatches("@") == true ||
+              element.elementBeforePreviousSpace()?.name() == "JS:NEW_KEYWORD"
+      ) {
         // We want to use type highlighting for class constructors
         Highlighting.TYPE
       } else {
