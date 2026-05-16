@@ -91,12 +91,7 @@ private fun getIdentifierHighlighting(
         return Highlighting.TYPE
       }
 
-      val secondNextElement = nextElement.nextLeaf()
-      if (
-          secondNextElement != null &&
-              secondNextElement.name() == "JS:IDENTIFIER" &&
-              (secondNextElement.isType())
-      ) {
+      if (isNamespaceComponentPrecedingType(nextDotElement = nextElement)) {
         return Highlighting.TYPE
       }
     }
@@ -135,6 +130,39 @@ private fun PsiElement.isType(): Boolean {
 /** Returns true if the string follows SCREAMING_SNAKE_CASE. */
 private fun String.isScreamingSnakeCase(): Boolean {
   return this.all { it.isUpperCase() || it == '_' }
+}
+
+/**
+ * @param nextDotElement Assumes that this element is the next leaf sibling of the element we're
+ *   currently investigating, and that we have already checked that its text matches "."
+ */
+private fun isNamespaceComponentPrecedingType(
+    nextDotElement: PsiElement,
+): Boolean {
+  var nextDotElement: PsiElement = nextDotElement
+  while (true) {
+    val nextNamespaceComponent = nextDotElement.nextLeaf() ?: return false
+
+    if (nextNamespaceComponent.name() != "JS:IDENTIFIER") {
+      return false
+    }
+
+    /**
+     * If the namespace sequence ends in a type, then we assume that the preceding identifiers were
+     * part of a namespace.
+     *
+     * This only works for types, not functions, as we can't identify for a function if the
+     * preceding identifiers were variables or namespace components.
+     */
+    if (nextNamespaceComponent.isType()) {
+      return true
+    }
+
+    nextDotElement = nextNamespaceComponent.nextLeaf() ?: return false
+    if (!nextDotElement.textMatches(".")) {
+      return false
+    }
+  }
 }
 
 private fun PsiElement.elementBeforePreviousSpace(): PsiElement? {
