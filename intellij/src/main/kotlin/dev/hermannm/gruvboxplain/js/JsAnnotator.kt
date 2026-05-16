@@ -11,6 +11,7 @@ import dev.hermannm.gruvboxplain.HighlightingConfig
 import dev.hermannm.gruvboxplain.HighlightingGroup
 import dev.hermannm.gruvboxplain.applyHighlighting
 import dev.hermannm.gruvboxplain.name
+import kotlin.text.isUpperCase
 
 private val JS_HIGHLIGHTING_CONFIG: HighlightingConfig =
     arrayOf(
@@ -61,6 +62,7 @@ private fun getIdentifierHighlighting(
   }
 
   val nextElement = element.nextLeaf()
+  val prevElement = element.prevLeaf()
   if (nextElement != null) {
     /**
      * Functions calls are sometimes not highlighted properly (e.g. when a function is returned from
@@ -68,7 +70,7 @@ private fun getIdentifierHighlighting(
      */
     if (nextElement.textMatches("(")) {
       return if (
-          element.prevLeaf()?.textMatches("@") == true ||
+          prevElement?.textMatches("@") == true ||
               element.elementBeforePreviousSpace()?.name() == "JS:NEW_KEYWORD"
       ) {
         // We want to use type highlighting for class constructors
@@ -97,14 +99,13 @@ private fun getIdentifierHighlighting(
 
   /**
    * IntelliJ highlights getters as function calls by default, but we want to highlight them as
-   * properties. So if the element is preceded by a dot, and the element text is not upper-case
-   * (i.e. a type), then we highlight it as a variable.
+   * properties. So if the element is preceded by a dot, and the element text is not a type
+   * identifier, then we highlight it as a variable.
    *
    * If the element _was_ a type, then we give the preceding identifier type highlighting, as that's
    * the highlighting we want for namespaces.
    */
-  val prevDotElement = element.prevLeaf()?.takeIf { it.textMatches(".") }
-  if (prevDotElement != null) {
+  if (prevElement != null && prevElement.textMatches(".")) {
     if (!element.isType()) {
       return Highlighting.VARIABLE
     }
@@ -120,7 +121,15 @@ private fun getIdentifierHighlighting(
 }
 
 private fun PsiElement.isType(): Boolean {
-  return this.text.firstOrNull()?.isUpperCase() == true
+  val text = this.text
+  return text.firstOrNull()?.isUpperCase() == true
+  /** Don't count constants on SCREAMING_SNAKE_CASE as types. */
+  && !text.isScreamingSnakeCase()
+}
+
+/** Returns true if the string follows SCREAMING_SNAKE_CASE. */
+private fun String.isScreamingSnakeCase(): Boolean {
+  return this.all { it.isUpperCase() || it == '_' }
 }
 
 private fun PsiElement.elementBeforePreviousSpace(): PsiElement? {
