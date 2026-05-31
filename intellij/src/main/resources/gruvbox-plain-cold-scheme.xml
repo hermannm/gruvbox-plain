@@ -74,6 +74,7 @@
     <option name="ScrollBar.thumbColor" value="50494588"/>
     <option name="ScrollBar.trackColor" value=""/>
     <option name="TEARLINE_COLOR" value="665C54"/>
+    <option name="VISUAL_INDENT_GUIDE" value=""/>
     <option name="WHITESPACES_MODIFIED_LINES_COLOR" value="98971A"/>
   </colors>
   <attributes>
