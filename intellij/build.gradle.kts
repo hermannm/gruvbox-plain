@@ -5,21 +5,21 @@ group = "dev.hermannm"
 
 version = "0.5.0"
 
+// Updating Gradle: Run `./gradlew wrapper --gradle-version <version>`
+// https://gradle.org/releases
 plugins {
-  kotlin("jvm") version "2.2.0"
-  id("org.jetbrains.intellij.platform") version "2.6.0"
-  id("org.jetbrains.changelog") version "2.2.1"
-}
-
-repositories {
-  mavenCentral()
-
-  intellijPlatform { defaultRepositories() }
+  // https://github.com/jetbrains/kotlin/releases
+  kotlin("jvm") version "2.4.0"
+  // https://plugins.gradle.org/plugin/org.jetbrains.intellij.platform
+  id("org.jetbrains.intellij.platform") version "2.16.0"
+  // https://plugins.gradle.org/plugin/org.jetbrains.changelog
+  id("org.jetbrains.changelog") version "2.5.0"
 }
 
 dependencies {
   intellijPlatform {
-    intellijIdeaCommunity("2025.1.1.1")
+    // https://www.jetbrains.com/idea/download/other/
+    intellijIdea("2026.1.3")
     bundledPlugin("com.intellij.java")
   }
 }
@@ -27,8 +27,22 @@ dependencies {
 intellijPlatform {
   pluginConfiguration {
     name = "gruvbox-plain"
-    ideaVersion { sinceBuild = "251" }
   }
+}
+
+kotlin {
+  // https://www.jetbrains.com/help/idea/supported-java-versions.html
+  jvmToolchain(25)
+
+  explicitApi()
+
+  compilerOptions { freeCompilerArgs.set(listOf("-Xwhen-guards")) }
+}
+
+repositories {
+  mavenCentral()
+
+  intellijPlatform { defaultRepositories() }
 }
 
 tasks {
@@ -61,12 +75,4 @@ changelog {
 
 tasks.named<RunIdeTask>("runIde") {
   jvmArgumentProviders += CommandLineArgumentProvider { listOf("-Didea.kotlin.plugin.use.k2=true") }
-}
-
-kotlin {
-  jvmToolchain(21)
-
-  explicitApi()
-
-  compilerOptions { freeCompilerArgs.set(listOf("-Xwhen-guards")) }
 }
