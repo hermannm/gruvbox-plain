@@ -61,19 +61,22 @@ private fun getIdentifierHighlighting(
     return null
   }
 
+  val isType = element.isType()
+  if (isType) {
+    return Highlighting.TYPE
+  }
+
   val nextElement = element.nextLeaf()
   val prevElement = element.prevLeaf()
   if (nextElement != null) {
     /**
      * Functions calls are sometimes not highlighted properly (e.g. when a function is returned from
-     * another function), so we do special-case handling of all function-call-esque syntax here.
+     * another function), so we do special-case handling of all function-call-esque syntax here
+     * (including '<' for generic functions).
      */
-    if (nextElement.textMatches("(")) {
-      return if (
-          prevElement?.textMatches("@") == true ||
-              element.elementBeforePreviousSpace()?.name() == "JS:NEW_KEYWORD"
-      ) {
-        // We want to use type highlighting for class constructors
+    if (nextElement.textMatches("(") || nextElement.textMatches("<")) {
+      return if (prevElement?.textMatches("@") == true) {
+        // We want to use type highlighting for decorators
         Highlighting.TYPE
       } else {
         // Other function calls should use normal function highlighting
@@ -82,18 +85,14 @@ private fun getIdentifierHighlighting(
     }
 
     /**
-     * If next element is a dot, then this might be either:
-     * - A class that we're accessing a static member of, which we want to highlight as a type
-     * - A namespace identifier in front of a type, which we also want to highlight as a type
+     * If next element is a dot, then this might be a namespace identifier in front of a type, which
+     * we also want to highlight as a type
      */
-    if (nextElement.textMatches(".")) {
-      if (element.isType()) {
-        return Highlighting.TYPE
-      }
-
-      if (isNamespaceComponentPrecedingType(nextDotElement = nextElement)) {
-        return Highlighting.TYPE
-      }
+    if (
+        nextElement.textMatches(".") &&
+            isNamespaceComponentPrecedingType(nextDotElement = nextElement)
+    ) {
+      return Highlighting.TYPE
     }
   }
 
@@ -106,7 +105,7 @@ private fun getIdentifierHighlighting(
    * the highlighting we want for namespaces.
    */
   if (prevElement != null && prevElement.textMatches(".")) {
-    if (!element.isType()) {
+    if (!isType) {
       return Highlighting.VARIABLE
     }
   }
