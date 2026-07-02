@@ -1,0 +1,9 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij">
+    <annotator
+      language="Python"
+      implementationClass="dev.hermannm.gruvboxplain.python.PythonAnnotator"
+      order="first"
+    />
+  </extensions>
+</idea-plugin>
