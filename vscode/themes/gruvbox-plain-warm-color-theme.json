@@ -20,6 +20,7 @@
       "name": "keywords, operators",
       "settings": { "foreground": "#fe8019" },
       "scope": [
+        "constant.language.import-export-all",
         "constant.other.placeholder",
         "keyword.operator",
         "keyword.type.graphql",
@@ -57,7 +58,9 @@
         "storage.type.sql",
         "support.class",
         "support.type",
-        "variable.other.enummember"
+        "variable.other.enummember",
+        // Scope for import names in TypeScript
+        "variable.other.readwrite.alias"
       ]
     },
     {
