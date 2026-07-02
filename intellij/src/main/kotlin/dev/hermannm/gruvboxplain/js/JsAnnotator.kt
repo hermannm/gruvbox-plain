@@ -2,7 +2,6 @@ package dev.hermannm.gruvboxplain.js
 
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.psi.PsiElement
-import com.intellij.psi.util.findParentInFile
 import com.intellij.psi.util.nextLeaf
 import com.intellij.psi.util.prevLeaf
 import dev.hermannm.gruvboxplain.BaseAnnotator
@@ -10,6 +9,7 @@ import dev.hermannm.gruvboxplain.Highlighting
 import dev.hermannm.gruvboxplain.HighlightingConfig
 import dev.hermannm.gruvboxplain.HighlightingGroup
 import dev.hermannm.gruvboxplain.applyHighlighting
+import dev.hermannm.gruvboxplain.hasParent
 import dev.hermannm.gruvboxplain.name
 import kotlin.text.isUpperCase
 
@@ -111,8 +111,7 @@ private fun getIdentifierHighlighting(
   }
 
   /** Finally, we want to use type highlighting for identifiers in import declarations. */
-  val parentImportDeclaration = element.findParentInFile { it.name() == "JS:IMPORT_DECLARATION" }
-  if (parentImportDeclaration != null) {
+  if (element.hasParent { it.name() == "JS:IMPORT_DECLARATION" }) {
     return Highlighting.TYPE
   }
 
