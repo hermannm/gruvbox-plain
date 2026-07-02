@@ -35,8 +35,6 @@ kotlin {
   jvmToolchain(25)
 
   explicitApi()
-
-  compilerOptions { freeCompilerArgs.set(listOf("-Xwhen-guards")) }
 }
 
 repositories {
