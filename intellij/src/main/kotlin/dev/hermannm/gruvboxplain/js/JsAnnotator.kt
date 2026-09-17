@@ -127,7 +127,7 @@ private fun PsiElement.isType(): Boolean {
 
 /** Returns true if the string follows SCREAMING_SNAKE_CASE. */
 private fun String.isScreamingSnakeCase(): Boolean {
-  return this.all { it.isUpperCase() || it == '_' }
+  return this.all { it.isUpperCase() || it.isDigit() || it == '_' }
 }
 
 /**
