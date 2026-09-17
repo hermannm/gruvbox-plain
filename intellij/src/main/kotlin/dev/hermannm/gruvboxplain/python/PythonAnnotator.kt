@@ -14,7 +14,7 @@ private val PYTHON_HIGHLIGHTING_CONFIG: HighlightingConfig =
     arrayOf(
         HighlightingGroup(
             Highlighting.KEYWORD,
-            symbols = arrayOf("super"),
+            symbols = arrayOf("super", "|"),
         ),
         HighlightingGroup(
             Highlighting.VALUE,
